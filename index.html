@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Farm Origin</title>
+<!--     <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+ -->    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="nav-container">
+        <a id="top"></a>
+        <!-- Custom Nav bar scrollable horizontal for mobiles -->
+        <style type="text/css">
+            @media only screen and (max-width: 768px) {
+                .nav-bar {
+                    display: none;
+                }
+            }
+            
+            @media only screen and (min-width: 768px) {
+                .scrollmenu {
+                    display: none;
+                }
+            }
+            div.scrollmenu {
+                background-color: #333;
+                white-space: nowrap;
+                position: fixed;
+                top: 0%;
+                z-index: 100;
+                overflow: none;
+                overflow-x: auto;
+                width: 100%;
+                top: 0;
+            }
+            
+            div.scrollmenu a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px;
+                text-decoration: none;
+            }
+            
+            div.scrollmenu a:hover {
+                background-color: #777;
+            }
+        </style>
+
+            <div id="mobile_horizontal_scrollbar" class="scrollmenu">
+                <a href="index.html" style="max-width: 40% !important">
+                            <img class="" alt="Foundry" src="img/logo-light.png">
+                </a>
+                <a href="index.html">Home</a>
+                <a href="about_us.html">About Us</a>
+                <a href="vco.html">Virgin Coconut Oil</a>
+                <a href="jam-preserve.html">Jams and Preserves</a>
+                <a href="spices.html">Spices</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+        <nav>
+            <div class="nav-bar">
+                <div class="module left">
+                    <a href="index.html">
+                        <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" />
+                        <img class="logo logo-dark" alt="Foundry" src="img/logo-dark.png" />
+                    </a>
+                </div>
+                <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                    <i class="ti-menu"></i>
+                </div>
+                <div class="module-group right">
+                    <div class="module left">
+                        <ul class="menu">
+                            <!--<li class="has-dropdown">-->
+                            <li>
+                                    <a href="index.html">
+                                            Home
+                                        </a>
+                            </li>
+                            <li>
+                                <a href="about_us.html">
+                                        About Us
+                                    </a>
+                                <!--
+                                    <ul class="mega-menu">
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <span class="title">Concepts</span>
+                                                </li>
+                                                <li>
+                                                    <a href="home-adventure.html">Adventure Travel</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-agency.html">Agency</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-agency-2.html">Agency 2</a>
+                                                    <span class="label">New!</span>
+                                                </li>
+                                                <li>
+                                                    <a href="home-app-landing.html">App Landing</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-app-landing-2.html">App Landing 2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-capital-firm.html">Capital Firm</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-fashion.html">Fashion</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-fitness.html">Fitness</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-restaurant.html">Restaurant</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-music.html">Music</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-event.html">Event / Seminar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-architecture.html">Architecture</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul>
+                                                <li>
+                                                    <a href="home-photography.html">Photography</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-photography-2.html">Ken Burns</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-personal-portfolio.html">Portfolio</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-property.html">Property Listing</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-resume.html">Resumé</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-winery.html">Winery</a>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Home Pages</span>
+                                                </li>
+                                                <li>
+                                                    <a href="index.html">Home Classic</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-default-2.html">Home Layout 2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-default-3.html">Home Layout 3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-default-4.html">Home Layout 4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="home-default-5.html">Home Layout 5</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    -->
+                            </li>
+                            <!-- <li class="has-dropdown"> -->
+                            <li>
+                                <a href="vco.html">
+                                        Virgin Coconut Oil
+                                    </a>
+                            </li>
+                            <!-- <li class="has-dropdown"> -->
+                            <li>
+                                <a href="jam-preserve.html">
+                                        Jams and Preserves
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="spices.html">
+                                        Spices
+                                    </a>
+                            </li>
+                            <!-- <li class="has-dropdown"> -->
+                            <li>
+                                <a href="contact.html">
+                                        Contact Us
+                                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--end of module group-->
+            </div>
+        </nav>
+    </div>
+    <div class="main-container">
+        <section class="page-title page-title-2 image-bg overlay parallax">
+            <div class="background-image-holder">
+                <img alt="Background Image" class="background-image" src="img/vco.jpg" />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="uppercase mb8">Virgin Coconut Oil</h2>
+                        <!--<p class="lead mb0">A descriptive subtitle for your page.</p>-->
+                    </div>
+                    <!--
+                        <div class="col-md-6 text-right">
+                            <ol class="breadcrumb breadcrumb-2">
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">Products</a>
+                                </li>
+                                <li class="active">Jams & Preserves</li>
+                            </ol>
+                        </div>
+                        -->
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h2 class="number">Cold-Pressed</h2>
+                        <p>
+                            Nature’s best kept secrets are retained in the goodness of coconuts grown in tropical regions. Extracted from fresh coconut milk, our virgin coconut oil is unrefined and cold pressed so as to retain its natural earthy properties.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2 class="number">Rich in Antioxidants</h2>
+                        <p>
+                            Processed at temperatures not exceeding 40 degrees centigrade, this clear oil retains a mild nutty aroma and is a rich source of antioxidants. It protects the skin from UV rays and has been proven to fight skin infections.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>Pure Bliss</h2>
+                        <p>
+                            In the kitchen, virgin coconut oil is a treasure trove of health benefits. It boosts metabolism, improves dental health and prolongs bone health. Rich in medium chain fatty acids, our virgin coconut oil has good cholesterol and is mostly devoid of trans fatty acids. Farm Origin brings to you blissful virgin coconut oil straight from the lush tropical farms of India. 
+                        </p>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+        <!--
+            <hr class="mb0">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h4 class="uppercase mb64 mb-xs-40">Our Jams Travelgoue</h4>
+                        </div>
+                    </div>
+                            <div class="text-center tabbed-content button-tabs">
+                                <ul class="tabs">
+                                    <li class="active">
+                                        <div class="tab-title">
+                                            <span>Production</span>
+                                        </div>
+                                        <div class="tab-content">
+                                            <p>
+                                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tab-title">
+                                            <span>Culture</span>
+                                        </div>
+                                        <div class="tab-content">
+                                            <p>
+                                                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tab-title">
+                                            <span>Method</span>
+                                        </div>
+                                        <div class="tab-content">
+                                            <p>
+                                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tab-title">
+                                            <span>Distribution</span>
+                                        </div>
+                                        <div class="tab-content">
+                                            <p>
+                                                Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            -->
+        <hr class="mb0">
+        <section>
+            <div class="container ">
+                <div class="row ">
+                    <div class="wpb_column vc_column_container col-md-12">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_text_column wpb_content_element ">
+                                    <div class="wpb_wrapper">
+                                        <h4 class="uppercase mb16" style="text-align: center;">Our Products</h4>
+                                        <!-- <p class="lead mb64" style="text-align: center;">Showcase your startup team in a simple &amp; beautiful grid.</p> -->
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="image-tile outer-title text-center">
+                                            <a target="_blank" href="https://www.amazon.in/dp/B07S3GFDXW?ref=myi_title_dp"><img width="577" height="300" src="img/VCO 200ml.jpg" style="object-fit: contain;overflow: hidden;"></a>
+                                            <div class="title mb16">
+                                                <h5 class="uppercase mb0"><a target="_blank" href="https://www.amazon.in/dp/B07S3GFDXW?ref=myi_title_dp">Virgin coconut oil 200 ml</a></h5><span>Farm Origin | Cold Pressed | Extracted from Coconut Milk | All Natural - 200 ML</span> </div>
+                                            <p><a class="btn btn-sm" target="_blank" href="https://www.amazon.in/dp/B07S3GFDXW?ref=myi_title_dp">BUY NOW</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="image-tile outer-title text-center">
+                                            <a target="_blank" href="https://www.amazon.in/dp/B07QTBVRL3?ref=myi_title_dp"><img width="577" height="300" src="img/VCO 500ml.jpg" style="object-fit: contain;overflow: hidden;"></a>
+                                            <div class="title mb16">
+                                                <h5 class="uppercase mb0"><a target="_blank" href="https://www.amazon.in/dp/B07QTBVRL3?ref=myi_title_dp">Virgin coconut oil 500 ml</a></h5><span>Farm Origin | Cold Pressed | Extracted from Coconut Milk | All Natural - 500 ML</span> </div>
+                                            <p><a class="btn btn-sm" target="_blank" href="https://www.amazon.in/dp/B07QTBVRL3?ref=myi_title_dp">BUY NOW</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="image-tile outer-title text-center">
+                                            <a target="_blank" href="https://www.amazon.in/dp/B07W2WFQ95?ref=myi_title_dp"><img width="577" height="300" src="img/VCO 1L.jpg" style="object-fit: contain;overflow: hidden;"></a>
+                                            <div class="title mb16">
+                                                <h5 class="uppercase mb0"><a target="_blank" href="https://www.amazon.in/dp/B07W2WFQ95?ref=myi_title_dp">Virgin coconut oil 1L</a></h5><span>Farm Origin | Cold Pressed | Extracted from Coconut Milk/Cream | All Natural - 1L</span> </div>
+                                            <p><a class="btn btn-sm" target="_blank" href="https://www.amazon.in/dp/B07W2WFQ95?ref=myi_title_dp">BUY NOW</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row"></div>
+                                <!--end of row-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- footer display not required for now -->
+        <style>
+        footer {
+            display: none;
+        }
+        </style>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flickr.js"></script>
+    <script src="js/flexslider.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/twitterfetcher.min.js"></script>
+    <script src="js/spectragram.min.js"></script>
+    <script src="js/ytplayer.min.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/scripts.js"></script>
+  <!--Adjustment for the scroll to work on Safari Browser in mobile and desktop-->
+    <script>
+    if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+            $(window).scroll(function() {
+            $("#mobile_horizontal_scrollbar").css({ 'position' : 'relative !important'});
+            $('#mobile_horizontal_scrollbar').css('top', "0px");
+            });
+    }
+    </script>
+    </body>
+
+</html>
