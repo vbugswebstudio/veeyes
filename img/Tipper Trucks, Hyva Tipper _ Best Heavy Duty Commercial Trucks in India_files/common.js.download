@@ -1,0 +1,4474 @@
+
+var emailRegex = new RegExp(/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$/i);
+var regex = /^[a-zA-Z ]*$/;
+
+var  mobileRegex = /^[1-9]\d{9}$/;
+var  landlineRegex = /^[\d]{8,15}$/;
+var  digitRegex = /^[0-9]*$/;
+var  passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-z0-9!@#$%^&*()]{6,20}$/;
+
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+
+function Remove(id) {
+	jQuery('#'+id).removeClass('error');
+    jQuery('#error_'+id).html('');
+}
+
+///// New Start
+
+function getWebSubcateTruckFilterList(product_type,web_cate_id,web_subcate_id){
+
+	var vehicle_gbw			= jQuery("#vehicle_gbw").val();
+	var vehicle_body_type	= jQuery("#vehicle_body_type").val();
+	var utmsource	= jQuery("#utmsource").val();
+	var utmdesc	= jQuery("#utmdesc").val();
+	var utmparam1	= jQuery("#utmparam1").val();
+	var utmparam2	= jQuery("#utmparam2").val();
+
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'product/get_ajax_truck_list',
+				data	: {
+							product_type:product_type, 
+							web_cate_id:web_cate_id,
+							web_subcate_id:web_subcate_id,
+							vehicle_gbw:vehicle_gbw,
+							vehicle_body_type:vehicle_body_type,
+							utmsource:utmsource,
+							utmdesc:utmdesc,
+							utmparam1:utmparam1,
+							utmparam2:utmparam2
+						},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-subcate-product-list').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+}
+
+function getListBodyType(product_type,cate_name,subcate_name){ //alert();
+	var vehicle_gbw			= jQuery("#vehicle_gbw").val();
+	jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'product/get_list_page_body_type',
+				data	: {
+							product_type:product_type, 
+							cate_name:cate_name, 
+							subcate_name:subcate_name,
+							vehicle_gbw:vehicle_gbw
+						},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#vehicle_body_type').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+function getWebSubcateBusesFilterList(product_type,web_cate_id,web_subcate_id){
+	var vehicle_fuel_type = jQuery("#vehicle_fuel_type").val();
+	var vehicle_seat_range	= jQuery("#vehicle_seat_range").val();
+	var utmsource	= jQuery("#utmsource").val();
+	var utmdesc	= jQuery("#utmdesc").val();
+	var utmparam1	= jQuery("#utmparam1").val();
+	var utmparam2	= jQuery("#utmparam2").val();
+
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'product/get_ajax_bus_list',
+				data	: {
+							product_type:product_type, 
+							web_cate_id:web_cate_id,
+							web_subcate_id:web_subcate_id,
+							vehicle_fuel_type:vehicle_fuel_type,
+							vehicle_seat_range:vehicle_seat_range,
+							utmsource:utmsource,
+							utmdesc:utmdesc,
+							utmparam1:utmparam1,
+							utmparam2:utmparam2
+						},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-subcate-product-list').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+}
+
+function getListSeatRangeType(product_type,cate_name,subcate_name){ //alert();
+	var vehicle_fuel_type			= jQuery("#vehicle_fuel_type").val();
+	jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'product/get_list_page_seat_range',
+				data	: {
+							product_type:product_type, 
+							cate_name:cate_name, 
+							subcate_name:subcate_name,
+							vehicle_fuel_type:vehicle_fuel_type
+						},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#vehicle_seat_range').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+function getWebFilterGbwRangeTrucks(product_type,cate_id,sub_cate_id){
+
+	if(product_type=='trucks' && sub_cate_id!=''){
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".find-search").show();
+					$(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/find_a_vehicle_gbw',
+				data	: {product_type:product_type, cate_id:cate_id,subcate_id:sub_cate_id},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-vehicle-subcate-data').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+	} 
+
+}
+
+function getWebFilterBodyTypeTrucks(product_type,cate_id,subcate_id){ // alert(jQuery("#vehicle_gbw_pop").val());
+	var vehicle_gbw		= jQuery("#vehicle_gbw_pop").val();
+	 //alert(vehicle_gbw);
+	if(product_type=='trucks' && vehicle_gbw!=''){
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".find-search").show();
+					$(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/find_a_vehicle_truck_body_type',
+				data	: {product_type:product_type, cate_id:cate_id,subcate_id:subcate_id,vehicle_gbw:vehicle_gbw},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-vehicle-body-type-data').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+	} 
+
+}
+
+
+function getWebFilterTrucksList(product_type,cate_slug,subcate_slug,range_slug){
+
+	var vehicle_body_type		= jQuery("#vehicle_body_type").val();
+
+	//alert(product_type+'/'+cate_slug+'/'+subcate_slug+'/'+range_slug+'/'+vehicle_body_type);
+
+	window.location.href=$site_url+'find-my-vehicle/'+product_type+'/'+cate_slug+'/'+subcate_slug+'/'+range_slug+'/'+vehicle_body_type;
+
+}
+
+
+function getWebCateProductSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	
+	//if(s_vehicle!=''){
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_vehicle_filter',
+				data	: {s_vehicle:s_vehicle},
+				success    : function(data){ 
+					
+					jQuery('#web-search-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+	//}
+}
+
+
+function getWebSubcateProductSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	
+	//if(s_vehicle!='' && s_category!=''){
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_truck_subcategory_filter',
+				data	: {s_vehicle:s_vehicle,s_category:s_category},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-truck-subcategory').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+	//}
+}
+
+function getWebBusSubcateProductSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_bus_subcategory_filter',
+				data	: {s_vehicle:s_vehicle,s_category:s_category},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-bus-subcategory').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+function getWebBusSubcateProductSearch2(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_category_type		= jQuery("#s_category_type").val();
+	jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_bus_subcategory_filter2',
+				data	: {s_vehicle:s_vehicle,s_category:s_category,s_category_type:s_category_type},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-bus-subcategory2').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+function getWebBusFuelTypeSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_category_type		= jQuery("#s_category_type").val();
+	var s_subcategory		= jQuery("#s_subcategory").val();
+	jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_bus_fuel_type_filter',
+				data	: {s_vehicle:s_vehicle,s_category:s_category,s_category_type:s_category_type,s_subcategory:s_subcategory},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-bus-fuel-type-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+function getWebBusConfigurationSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_subcategory		= jQuery("#s_subcategory").val();
+	var s_fuel_type		= jQuery("#s_fuel_type").val();
+	jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_bus_configuration_filter',
+				data	: {s_vehicle:s_vehicle,s_category:s_category,s_subcategory:s_subcategory,s_fuel_type:s_fuel_type},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-configuration-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+function getWebBusSeatRangeSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_category_type		= jQuery("#s_category_type").val();
+	var s_subcategory		= jQuery("#s_subcategory").val();
+	var s_fuel_type		= jQuery("#s_fuel_type").val();
+	var s_configuration		= jQuery("#s_configuration").val();
+	jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_bus_seat_range_filter',
+				data	: {
+							s_vehicle:s_vehicle,
+							s_category:s_category,
+							s_category_type:s_category_type,
+							s_subcategory:s_subcategory,
+							s_fuel_type:s_fuel_type,
+							s_configuration:s_configuration
+						},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-seat-range-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+function getWebBusSeatTypeSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_category_type		= jQuery("#s_category_type").val();
+	var s_subcategory		= jQuery("#s_subcategory").val();
+	var s_fuel_type		= jQuery("#s_fuel_type").val();
+	var s_configuration		= jQuery("#s_configuration").val();
+	var s_seat_range		= jQuery("#s_seat_range").val();
+	jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_bus_seat_type_filter',
+				data	: {
+							s_vehicle:s_vehicle,
+							s_category:s_category,
+							s_category_type:s_category_type,
+							s_subcategory:s_subcategory,
+							s_fuel_type:s_fuel_type,
+							s_configuration:s_configuration,
+							s_seat_range:s_seat_range
+						},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-seat-type-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+function getWebBusACNonACSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_category_type		= jQuery("#s_category_type").val();
+	var s_subcategory		= jQuery("#s_subcategory").val();
+	var s_fuel_type		= jQuery("#s_fuel_type").val();
+	var s_configuration		= jQuery("#s_configuration").val();
+	var s_seat_range		= jQuery("#s_seat_range").val();
+	var s_seat_type		= jQuery("#s_seat_type").val();
+	jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_bus_ac_non_ac_filter',
+				data	: {
+							s_vehicle:s_vehicle,
+							s_category:s_category,
+							s_category_type:s_category_type,
+							s_subcategory:s_subcategory,
+							s_fuel_type:s_fuel_type,
+							s_configuration:s_configuration,
+							s_seat_range:s_seat_range,
+							s_seat_type:s_seat_type
+						},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-ac-non-ac-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+//LMD Filter
+function getWebLmdGbwSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_subcategory		= jQuery("#s_subcategory").val();
+	
+	//if(s_vehicle!='' && s_category!='' && s_subcategory!=''){
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_truck_lmd_gbw_filter',
+				data	: {s_vehicle:s_vehicle,s_category:s_category,s_subcategory:s_subcategory},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-truck-lmd-gbw-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+	//}
+}
+function getWebLmdFuelTypeSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_subcategory	= jQuery("#s_subcategory").val();
+	var s_gvw			= jQuery("#s_gvw").val();
+	
+	//if(s_vehicle!='' && s_category!='' && s_subcategory!=''){
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_truck_lmd_fuel_type_filter',
+				data	: {s_vehicle:s_vehicle,s_category:s_category,s_subcategory:s_subcategory,s_gvw:s_gvw},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-truck-lmd-fuel-type-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+	//}
+}
+
+//HD Filter
+function getWebHdGbwSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_subcategory		= jQuery("#s_subcategory").val();
+	
+	//if(s_vehicle!='' && s_category!='' && s_subcategory!=''){
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_truck_hd_gbw_filter',
+				data	: {s_vehicle:s_vehicle,s_category:s_category,s_subcategory:s_subcategory},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-truck-hd-gbw-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+	//}
+}
+function getWebHdBodTypeSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_subcategory	= jQuery("#s_subcategory").val();
+	var s_gvw			= jQuery("#s_gvw").val();
+	
+	//if(s_vehicle!='' && s_category!='' && s_subcategory!=''){
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_truck_hd_body_type_filter',
+				data	: {s_vehicle:s_vehicle,s_category:s_category,s_subcategory:s_subcategory,s_gvw:s_gvw},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-truck-hd-body-type-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+	//}
+}
+
+function getWebHdPowerProductSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_subcategory	= jQuery("#s_subcategory").val();
+	var s_gvw			= jQuery("#s_gvw").val();
+	var s_body_type		= jQuery("#s_body_type").val();
+	
+	//if(s_vehicle!='' && s_category!='' && s_subcategory!=''){
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_truck_hd_power_filter',
+				data	: {
+							s_vehicle:s_vehicle,
+							s_category:s_category,
+							s_subcategory:s_subcategory,
+							s_gvw:s_gvw,
+							s_body_type:s_body_type
+						},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-truck-hd-power-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+	//}
+}
+function getWebHdLastProductSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_subcategory	= jQuery("#s_subcategory").val();
+	var s_gvw			= jQuery("#s_gvw").val();
+	var s_body_type		= jQuery("#s_body_type").val();
+	var s_power		= jQuery("#s_power").val();
+	
+	//if(s_vehicle!='' && s_category!='' && s_subcategory!=''){
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_truck_hd_last_filter',
+				data	: {
+							s_vehicle:s_vehicle,
+							s_category:s_category,
+							s_subcategory:s_subcategory,
+							s_gvw:s_gvw,
+							s_body_type:s_body_type,
+							s_power:s_power
+						},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-truck-hd-last-filter').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+	//}
+}
+
+
+function getWebCateHdSubcateProductSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_subcategory		= jQuery("#s_subcategory").val();
+	
+	//if(s_vehicle!='' && s_category!='' && s_subcategory!=''){
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_truck_category_subcategory_filter',
+				data	: {s_vehicle:s_vehicle,s_category:s_category,s_subcategory:s_subcategory},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-truck-subcategory-after').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+	//}
+}
+
+
+function getWebPowerProductSearch(){
+	var s_vehicle		= jQuery("#s_vehicle").val();
+	var s_category		= jQuery("#s_category").val();
+	var s_subcategory		= jQuery("#s_subcategory").val();
+	var s_gvw		= jQuery("#s_gvw").val();
+	var s_body_type		= jQuery("#s_body_type").val();
+	var s_power		= jQuery("#s_power").val();
+	
+	if(s_vehicle!='' && s_category!='' && s_subcategory!='' && s_gvw!='' && s_body_type!='' && s_power !=''){
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_truck_power_filter',
+				data	: {
+							s_vehicle:s_vehicle,
+							s_category:s_category,
+							s_subcategory:s_subcategory,
+							s_gvw:s_gvw,
+							s_body_type:s_body_type,
+							s_power:s_power,
+						},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-truck-power-after').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+	}
+}
+
+
+function getSearchGbwForTruck(){
+	var s_product_type		= jQuery("#s_product_type").val();
+	var s_vehicle			= jQuery("#s_vehicle").val();
+	var s_category			= jQuery("#s_category").val();
+
+	if(s_category!=''){
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_vehicle_truck_gbw_filter',
+				data	: {s_type:s_product_type, s_vehicle:s_vehicle,s_sub_category:s_category},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-step-1').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+	}
+}
+
+
+function getSearchBodyTypeForTruck(){
+	var s_product_type		= jQuery("#s_product_type").val();
+	var s_vehicle			= jQuery("#s_vehicle").val();
+	var s_category			= jQuery("#s_category").val();
+	var s_gbw				= jQuery("#s_gbw").val();
+
+	if(s_gbw!=''){
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_search_vehicle_truck_body_type_filter',
+				data	: {s_type:s_product_type, s_vehicle:s_vehicle,s_sub_category:s_category,s_gbw:s_gbw},
+				success    : function(data){ 
+					
+					jQuery('#search-filter-step-2').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+	}
+}
+
+function getCabinType(){
+
+var ef_category			= jQuery("#ef_category").val();
+	var ef_subcategory		= jQuery("#ef_subcategory").val();
+	var ef_gvw				= jQuery("#ef_gvw").val();
+	var ef_fuel_type		= jQuery("#ef_fuel_type").val();
+	var ef_power			= jQuery("#ef_power").val();
+	var ef_body_type		= jQuery("#ef_body_type").val();
+	var ef_truck_id			= jQuery("#ef_truck_id").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_quote_cabin_type',
+				data	: {
+								ef_truck_id:ef_truck_id, 
+								ef_category:ef_category, 
+								ef_subcategory:ef_subcategory,
+								ef_gvw:ef_gvw,
+								ef_fuel_type:ef_fuel_type,
+								ef_power:ef_power,
+								ef_body_type:ef_body_type
+						   },
+				success    : function(data){ 
+					
+					jQuery('#filter-cabin-type-data').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+
+}
+function getAxleType(){
+
+var ef_category			= jQuery("#ef_category").val();
+	var ef_subcategory		= jQuery("#ef_subcategory").val();
+	var ef_gvw				= jQuery("#ef_gvw").val();
+	var ef_fuel_type		= jQuery("#ef_fuel_type").val();
+	var ef_power			= jQuery("#ef_power").val();
+	var ef_body_type		= jQuery("#ef_body_type").val();
+	var ef_truck_id			= jQuery("#ef_truck_id").val();
+	var ef_cabin_type			= jQuery("#ef_cabin_type").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_quote_axle',
+				data	: {
+								ef_truck_id:ef_truck_id, 
+								ef_category:ef_category, 
+								ef_subcategory:ef_subcategory,
+								ef_gvw:ef_gvw,
+								ef_fuel_type:ef_fuel_type,
+								ef_power:ef_power,
+								ef_body_type:ef_body_type,
+								ef_cabin_type:ef_cabin_type
+						   },
+				success    : function(data){ 
+					
+					jQuery('#filter-axle-data').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+
+}
+function getAxleConfigurationy(){
+
+var ef_category			= jQuery("#ef_category").val();
+	var ef_subcategory		= jQuery("#ef_subcategory").val();
+	var ef_gvw				= jQuery("#ef_gvw").val();
+	var ef_fuel_type		= jQuery("#ef_fuel_type").val();
+	var ef_power			= jQuery("#ef_power").val();
+	var ef_body_type		= jQuery("#ef_body_type").val();
+	var ef_truck_id			= jQuery("#ef_truck_id").val();
+	var ef_cabin_type		= jQuery("#ef_cabin_type").val();
+	var ef_axle				= jQuery("#ef_axle").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_quote_axle_configurationy',
+				data	: {
+								ef_truck_id:ef_truck_id, 
+								ef_category:ef_category, 
+								ef_subcategory:ef_subcategory,
+								ef_gvw:ef_gvw,
+								ef_fuel_type:ef_fuel_type,
+								ef_power:ef_power,
+								ef_body_type:ef_body_type,
+								ef_cabin_type:ef_cabin_type,
+								ef_axle:ef_axle
+						   },
+				success    : function(data){ 
+					
+					jQuery('#filter-axle-configurationy-data').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+
+}
+
+function getHdFertId(){ //alert();
+
+	var ef_category			= jQuery("#ef_category").val();
+	var ef_subcategory		= jQuery("#ef_subcategory").val();
+	var ef_gvw				= jQuery("#ef_gvw").val();
+	var ef_fuel_type		= jQuery("#ef_fuel_type").val();
+	var ef_power			= jQuery("#ef_power").val();
+	var ef_body_type		= jQuery("#ef_body_type").val();
+	var ef_truck_id			= jQuery("#ef_truck_id").val();
+	var ef_cabin_type		= jQuery("#ef_cabin_type").val();
+	var ef_axle				= jQuery("#ef_axle").val();
+	var ef_axle_configurationy				= jQuery("#ef_axle_configurationy").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_quote_hd_fert_id',
+				data	: {
+								ef_truck_id:ef_truck_id, 
+								ef_category:ef_category, 
+								ef_subcategory:ef_subcategory,
+								ef_gvw:ef_gvw,
+								ef_fuel_type:ef_fuel_type,
+								ef_power:ef_power,
+								ef_body_type:ef_body_type,
+								ef_cabin_type:ef_cabin_type,
+								ef_axle:ef_axle,
+								ef_axle_configurationy:ef_axle_configurationy
+						   },
+				success    : function(data){ 
+					data_arra = data.split('@@'); 
+					jQuery('#ef_fert').val(data_arra[0].trim());
+					jQuery('#ef_fert_description').val(data_arra[1].trim());
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+
+}
+
+function getCargoBodyLength(){
+	var ef_category			= jQuery("#ef_category").val();
+	var ef_subcategory		= jQuery("#ef_subcategory").val();
+	var ef_gvw				= jQuery("#ef_gvw").val();
+	var ef_truck_id			= jQuery("#ef_truck_id").val();
+	var ef_fuel_type			= jQuery("#ef_fuel_type").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_cargo_body_length',
+				data	: {
+								ef_truck_id:ef_truck_id, 
+								ef_category:ef_category, 
+								ef_subcategory:ef_subcategory,
+								ef_gvw:ef_gvw,
+								ef_fuel_type:ef_fuel_type
+						   },
+				success    : function(data){ 
+					
+					jQuery('#filter-cargo-body-length-data').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+function getBodyType(){
+	var ef_category			= jQuery("#ef_category").val();
+	var ef_subcategory		= jQuery("#ef_subcategory").val();
+	var ef_gvw				= jQuery("#ef_gvw").val();
+	var ef_truck_id			= jQuery("#ef_truck_id").val();
+	var ef_fuel_type			= jQuery("#ef_fuel_type").val();
+	var ef_cargo_body_length			= jQuery("#ef_cargo_body_length").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_body_type',
+				data	: {
+								ef_truck_id:ef_truck_id, 
+								ef_category:ef_category, 
+								ef_subcategory:ef_subcategory,
+								ef_gvw:ef_gvw,
+								ef_fuel_type:ef_fuel_type,
+								ef_cargo_body_length:ef_cargo_body_length
+						   },
+				success    : function(data){ 
+					
+					jQuery('#filter-body-type-data').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+function getLMDFertId(){ 
+	var ef_category			= jQuery("#ef_category").val();
+	var ef_subcategory		= jQuery("#ef_subcategory").val();
+	var ef_gvw				= jQuery("#ef_gvw").val();
+	var ef_truck_id			= jQuery("#ef_truck_id").val();
+	var ef_fuel_type		= jQuery("#ef_fuel_type").val();
+	var ef_cargo_body_length= jQuery("#ef_cargo_body_length").val();
+	var ef_body_type		= jQuery("#ef_body_type").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_quote_lmd_fert_id',
+				data	: {
+								ef_truck_id:ef_truck_id, 
+								ef_category:ef_category, 
+								ef_subcategory:ef_subcategory,
+								ef_gvw:ef_gvw,
+								ef_fuel_type:ef_fuel_type,
+								ef_cargo_body_length:ef_cargo_body_length,
+								ef_body_type:ef_body_type
+						   },
+				success    : function(data){ 
+					
+					data_arra = data.split('@@'); 
+					jQuery('#ef_fert').val(data_arra[0].trim());
+					jQuery('#ef_fert_description').val(data_arra[1].trim());
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+}
+
+function getSeatingPattern(){
+		var ef_truck_id			= jQuery("#ef_truck_id").val();
+	var ef_category			= jQuery("#ef_category").val();
+	var ef_subcategory		= jQuery("#ef_subcategory").val();
+	var ef_fuel_type				= jQuery("#ef_fuel_type").val();
+	//var ef_configuration			= jQuery("#ef_configuration").val();
+	var ef_seat_range			= jQuery("#ef_seat_range").val();
+	//var ef_seating_pattern			= jQuery("#ef_seating_pattern").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_seating_pattern',
+				data	: {
+								ef_truck_id:ef_truck_id, 
+								ef_category:ef_category, 
+								ef_subcategory:ef_subcategory,
+								ef_fuel_type:ef_fuel_type,
+								//ef_configuration:ef_configuration,
+								ef_seat_range:ef_seat_range,
+								//ef_seating_pattern:ef_seating_pattern
+						   },
+				success    : function(data){ 
+					
+					jQuery('#filter-seating-pattern').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+function getPreferredSeating(){
+		var ef_truck_id			= jQuery("#ef_truck_id").val();
+	var ef_category			= jQuery("#ef_category").val();
+	var ef_subcategory		= jQuery("#ef_subcategory").val();
+	var ef_fuel_type				= jQuery("#ef_fuel_type").val();
+	//var ef_configuration			= jQuery("#ef_configuration").val();
+	var ef_seat_range			= jQuery("#ef_seat_range").val();
+	var ef_seating_pattern			= jQuery("#ef_seating_pattern").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_preferred_seating',
+				data	: {
+								ef_truck_id:ef_truck_id, 
+								ef_category:ef_category, 
+								ef_subcategory:ef_subcategory,
+								ef_fuel_type:ef_fuel_type,
+								//ef_configuration:ef_configuration,
+								ef_seat_range:ef_seat_range,
+								ef_seating_pattern:ef_seating_pattern
+						   },
+				success    : function(data){ 
+					
+					jQuery('#filter-preferred-seating-data').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+
+function getBusFertId(){ 
+	var ef_truck_id			= jQuery("#ef_truck_id").val();
+	var ef_category			= jQuery("#ef_category").val();
+	var ef_subcategory		= jQuery("#ef_subcategory").val();
+	var ef_fuel_type				= jQuery("#ef_fuel_type").val();
+	//var ef_configuration			= jQuery("#ef_configuration").val();
+	var ef_seat_range			= jQuery("#ef_seat_range").val();
+	var ef_seating_pattern			= jQuery("#ef_seating_pattern").val();
+	var ef_preferred_seating			= jQuery("#ef_preferred_seating").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_quote_bus_fert_id',
+				data	: {
+								ef_truck_id:ef_truck_id, 
+								ef_category:ef_category, 
+								ef_subcategory:ef_subcategory,
+								ef_fuel_type:ef_fuel_type,
+							//	ef_configuration:ef_configuration,
+								ef_seat_range:ef_seat_range,
+								ef_seating_pattern:ef_seating_pattern,
+								ef_preferred_seating:ef_preferred_seating
+						   },
+				success    : function(data){ 
+					
+					data_arra = data.split('@@'); 
+					jQuery('#ef_fert').val(data_arra[0].trim());
+					jQuery('#ef_fert_description').val(data_arra[1].trim());
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+}
+
+
+function getEquoteDistrict(){
+		var e_state			= jQuery("#e_state").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_equote_dealer_district',
+				data	: {
+								e_state:e_state
+						   },
+				success    : function(data){ 
+					
+					jQuery('#e_district').html(data);
+					jQuery('#e_city').html('<option value="">City</option>');
+					jQuery('#e_dealer').html('<option value="">Preffered Dealer</option>');
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+function getEquoteCity(){
+		var e_state			= jQuery("#e_state").val();
+		var e_district			= jQuery("#e_district").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_equote_dealer_city',
+				data	: {
+								e_state:e_state,
+								e_district:e_district
+						   },
+				success    : function(data){ 
+					
+					jQuery('#e_city').html(data);
+					jQuery('#e_dealer').html('<option value="">Preffered Dealer</option>');
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+
+function getEquoteDealer(){
+		var e_state			= jQuery("#e_state").val();
+		var e_district			= jQuery("#e_district").val();
+		var e_city			= jQuery("#e_city").val();
+
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'product/web_equote_dealer',
+				data	: {
+								e_state:e_state,
+								e_district:e_district,
+								e_city:e_city
+						   },
+				success    : function(data){ 
+					
+					jQuery('#e_dealer').html(data);
+					
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+}
+// New Ends
+
+
+
+
+
+
+function submitSearchForm(){
+	var site_search		= jQuery("#site_search").val();
+	if(site_search==''){
+		jQuery("#site_search").focus(); 
+		return false;
+	}
+}
+
+function submitSearchMobileForm(){ //alert(); return false;
+	var site_search_mobile		= jQuery("#site_search_mobile").val();
+	if(site_search_mobile==''){
+		jQuery("#site_search_mobile").focus(); 
+		return false;
+	}
+	else {  //alert(site_search_mobile);
+		window.location.href=$site_url+'search?site_search='+site_search_mobile;
+	}
+}
+function submitSearchPopupForm(){
+	var site_search_popup		= jQuery("#site_search_popup").val();
+	if(site_search_popup==''){
+		jQuery("#site_search_popup").focus(); 
+		return false;
+	}
+	else {
+		window.location.href=$site_url+'search?site_search='+site_search_popup;
+	}
+}
+
+function submitSearchPageForm(){ 
+	var site_search		= jQuery("#site_search_page").val();
+	if(site_search==''){
+		jQuery("#site_search_page").focus(); 
+		return false;
+	} else {
+		window.location.href=$site_url+'search?site_search='+site_search;
+	}
+}
+
+//October
+function submitSearchBlogForm(){  
+	var blog_search		= jQuery("#blog_search").val();
+	if(blog_search==''){
+		jQuery("#blog_search").focus(); 
+		return false;
+	} else {
+		window.location.href=$site_url+'blog/search?s='+blog_search;
+	}
+}
+
+function chkBlogByYear(cate_slug){
+	var blog_year		= jQuery("#blog_year").val();
+	//alert(cate_slug+"  "+blog_year);
+	jQuery.ajax({
+		beforeSend: function () {
+			$(".find-search").show();
+			$(".loaderform").show();
+		},
+		type	: "POST",
+		url		: $site_url+'Blog/get_year_filter',
+		data	: {cate_slug:cate_slug, blog_year:blog_year},
+		success    : function(data){
+			 data_arra = data.split('@@'); 
+			
+			jQuery('#blog-year-filter-data').html(data);
+			
+		},
+		complete: function() {
+			$(".loaderform").hide();
+		},
+
+	});
+	return false;
+}
+
+function getHelpfulBlogVal(blog_id,option_val){
+	//alert(blog_id+"--"+option_val);
+
+	jQuery.ajax({
+		beforeSend: function () {
+			$(".find-search").show();
+			$(".loaderform").show();
+		},
+		type	: "POST",
+		url		: $site_url+'Blog/update_help_val',
+		data	: {blog_id:blog_id,option_val:option_val},
+		success    : function(data){
+			 //data_arra = data.split('@@'); 
+			
+			jQuery('#div-helpful').html(data);
+			
+		},
+		complete: function() {
+			$(".loaderform").hide();
+		},
+
+	});
+	
+}
+
+
+function getFilterSubcategory(product_type,cate_id){
+	
+	if(product_type=='trucks' || product_type=='buses' || product_type=='special-applications'){
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".find-search").show();
+					$(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'Ajax_request/find_a_vehicle_subcate',
+				data	: {product_type:product_type, cate_id:cate_id},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-vehicle-subcate-data').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+	} 
+}
+
+function getFilterGbwRangeTrucks(product_type,cate_id){
+	var vehicle_subcate		= jQuery("#vehicle_subcate").val();
+
+	if(product_type=='trucks' && vehicle_subcate!=''){
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".find-search").show();
+					$(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'Ajax_request/find_a_vehicle_gbw',
+				data	: {product_type:product_type, cate_id:cate_id,subcate_id:vehicle_subcate},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-vehicle-gvw-data').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+	} 
+
+}
+
+function getFilterBodyTypeTrucks(product_type,cate_id,subcate_id){ //alert();
+	var vehicle_gbw		= jQuery("#vehicle_gbw").val();
+
+	if(product_type=='trucks' && vehicle_gbw!=''){
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".find-search").show();
+					$(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'Ajax_request/find_a_vehicle_truck_body_type',
+				data	: {product_type:product_type, cate_id:cate_id,subcate_id:subcate_id,vehicle_gbw:vehicle_gbw},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-vehicle-body-type-data').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+	} 
+
+}
+function getFilterTrucksList(product_type,cate_slug,subcate_slug,range_slug){
+
+	var vehicle_body_type		= jQuery("#vehicle_body_type").val();
+
+	//alert(product_type+'/'+cate_slug+'/'+subcate_slug+'/'+range_slug+'/'+vehicle_body_type);
+
+	window.location.href=$site_url+'find-my-vehicle/'+product_type+'/'+cate_slug+'/'+subcate_slug+'/'+range_slug+'/'+vehicle_body_type;
+
+}
+
+// For Buses 
+
+function getFilterBodyTypeBuses(product_type,cate_id){
+	var vehicle_subcate		= jQuery("#vehicle_subcate").val();
+
+	if(product_type=='buses' && vehicle_subcate!=''){
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".find-search").show();
+					$(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'Ajax_request/find_a_vehicle_buses_body_type',
+				data	: {product_type:product_type, cate_id:cate_id,subcate_id:vehicle_subcate},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-buses-body-type-data').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+	} 
+
+}
+
+function getFilterBusesSeatingCapacity(product_type,cate_id,subcate_id){ 
+	var vehicle_body_type		= jQuery("#vehicle_body_bus_type").val();
+	//alert(vehicle_body_type+'--'+product_type);
+	if(product_type=='buses' && vehicle_body_type!=''){
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".find-search").show();
+					$(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'Ajax_request/find_a_vehicle_buses_seating_capacity',
+				data	: {product_type:product_type, cate_id:cate_id,subcate_id:subcate_id,vehicle_body_type:vehicle_body_type},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-buses-seating-capacity-data').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+	} 
+
+}
+
+function getFilterBusesList(product_type,cate_slug,subcate_slug,body_type_slug){
+
+	var vehicle_seating_capacity		= jQuery("#vehicle_seating_capacity").val();
+
+	//alert(product_type+'/'+cate_slug+'/'+subcate_slug+'/'+body_type_slug+'/'+vehicle_seating_capacity);
+
+	window.location.href=$site_url+'find-my-vehicle/'+product_type+'/'+cate_slug+'/'+subcate_slug+'/'+body_type_slug+'/'+vehicle_seating_capacity;
+
+}
+
+// Special Application 
+
+function getFilterSolutionTypeSpecialApplication(product_type,cate_id){
+	var vehicle_subcate		= jQuery("#vehicle_subcate").val();
+
+	if(product_type=='special-applications' && vehicle_subcate!=''){
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".find-search").show();
+					$(".loaderform").show();
+				},
+				type	: "POST",
+				url		: $site_url+'Ajax_request/find_a_vehicle_special_application_solution',
+				data	: {product_type:product_type, cate_id:cate_id,subcate_id:vehicle_subcate},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-special-applications-solution-data').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+	} 
+
+}
+
+function getFilterSpecialApplicationList(product_type,cate_slug,subcate_slug){
+
+	var vehicle_solution		= jQuery("#vehicle_solution").val();
+
+	if(vehicle_solution!=''){
+
+		window.location.href=$site_url+'find-my-vehicle/'+product_type+'/'+cate_slug+'/'+subcate_slug+'/'+vehicle_solution;
+	} else {
+		return false;
+	}
+
+}
+
+// for find a vehicle truck page
+
+function getFilterTrucksPageList(product_type,cate_slug,subcate_slug){
+
+	var vehicle_gbw		= jQuery("#vehicle_gbw").val();
+	var vehicle_body_type		= jQuery("#vehicle_body_type").val();
+
+	if(vehicle_gbw!='' && vehicle_body_type!=''){
+
+		window.location.href=$site_url+'find-my-vehicle/'+product_type+'/'+cate_slug+'/'+subcate_slug+'/'+vehicle_gbw+'/'+vehicle_body_type;
+	} else {
+		return false;
+	}
+}
+
+// for find a vehicle buses page
+
+
+function getFilterBusesPageList(product_type,cate_slug,subcate_slug){
+
+	var vehicle_body_type		= jQuery("#vehicle_body_type").val();
+	var vehicle_seating_capacity		= jQuery("#vehicle_seating_capacity").val();
+
+	if(vehicle_body_type!='' && vehicle_seating_capacity!=''){
+
+		window.location.href=$site_url+'find-my-vehicle/'+product_type+'/'+cate_slug+'/'+subcate_slug+'/'+vehicle_body_type+'/'+vehicle_seating_capacity;} else {
+		return false;
+	}
+
+}
+
+// For Subcategory page
+
+function getSubcateTruckFilterList(product_type,cate_slug,subcate_slug){
+
+	var vehicle_gbw			= jQuery("#vehicle_gbw").val();
+	var vehicle_body_type	= jQuery("#vehicle_body_type").val();
+
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'Ajax_request/get_ajax_truck_list',
+				data	: {
+							product_type:product_type, 
+							cate_slug:cate_slug,
+							subcate_slug:subcate_slug,
+							vehicle_gbw:vehicle_gbw,
+							vehicle_body_type:vehicle_body_type
+						},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-subcate-product-list').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+}
+
+
+function getSubcateBusesFilterList(product_type,cate_slug,subcate_slug){
+
+	var vehicle_seating_capacity = jQuery("#vehicle_seating_capacity").val();
+	var vehicle_body_type	= jQuery("#vehicle_body_type").val();
+
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'Ajax_request/get_ajax_bus_list',
+				data	: {
+							product_type:product_type, 
+							cate_slug:cate_slug,
+							subcate_slug:subcate_slug,
+							vehicle_seating_capacity:vehicle_seating_capacity,
+							vehicle_body_type:vehicle_body_type
+						},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#get-subcate-product-list').html(data);
+					
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+
+}
+
+
+
+
+function sendSmsLocation(dealer_id){ //alert(dealer_id)
+	
+	var dealer_phone		= jQuery("#dealer_phone_"+dealer_id).val();
+	//alert(dealer_phone); 
+	if(dealer_phone==''){
+		return false;
+	} else {
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'ajax_request/sms_directions',
+				data	: {dealer_id:dealer_id,dealer_phone:dealer_phone},
+				success    : function(data){
+					 jQuery(".popup-thank.smsthanks").show();
+					 jQuery("#dealer_phone_"+dealer_id).val("");
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+		
+	}
+	
+}
+
+function sendSmsDEfLocation(dealer_id){ //alert(dealer_id); 
+	
+	var dealer_phone		= jQuery("#dealer_phone_"+dealer_id).val();
+	//alert(dealer_phone); 
+	if(dealer_phone==''){
+		return false;
+	} else {
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'ajax_request/sms_def_directions',
+				data	: {dealer_id:dealer_id,dealer_phone:dealer_phone},
+				success    : function(data){
+					 jQuery(".popup-thank.smsthanks").show();
+					 jQuery("#dealer_phone_"+dealer_id).val("");
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+		
+	}
+	
+}
+
+
+function sendSmsIBLocation(dealer_id){ //alert(dealer_id)
+	
+	var dealer_phone		= jQuery("#dealer_phone_"+dealer_id).val();
+	//alert(dealer_phone); 
+	if(dealer_phone==''){
+		return false;
+	} else {
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'ajax_request/sms_ib_directions',
+				data	: {dealer_id:dealer_id,dealer_phone:dealer_phone},
+				success    : function(data){
+					 jQuery(".popup-thank.smsthanks").show();
+					 jQuery("#dealer_phone_"+dealer_id).val("");
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+		
+	}
+	
+}
+
+function getContactCategory(){
+	var you_want_to_contact_us_for		= jQuery("#you_want_to_contact_us_for").val();
+	
+
+	if(you_want_to_contact_us_for=='Product & Price Enquiry'){
+		jQuery(".hidden-cat").css("display", "block");
+	} else {
+		jQuery(".hidden-cat").css("display", "none");
+	}
+}
+
+function getAllUsedTruck(){
+	var used_payload		= jQuery("#used_payload").val();
+	var used_price_range	= jQuery("#used_price_range").val();
+	var used_state			= jQuery("#used_state").val();
+	var used_age			= jQuery("#used_age").val();
+
+	//if(used_payload=='' || used_price_range=='' || used_state=='' || used_age==''){
+	//if(used_payload==''){
+		//return false;
+	//} else {
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'ajax_request/get_selected_used_truck',
+				data	: 	{
+								used_payload:used_payload,
+								used_price_range:used_price_range,
+								used_state:used_state,
+								used_age:used_age
+						  	},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#used-truck-list').html(data);
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+		
+	//}
+}
+
+function getAllUsedTruckNew(){
+	var used_payload		= jQuery("#used_payload").val();
+	var used_price_range	= jQuery("#used_price_range").val();
+	var used_state			= jQuery("#used_state").val();
+	var used_age			= jQuery("#used_age").val();
+
+	//if(used_payload=='' || used_price_range=='' || used_state=='' || used_age==''){
+	//if(used_payload==''){
+		//return false;
+	//} else {
+		jQuery.ajax({
+				beforeSend: function () {
+					$(".loaderform").show(); 
+				},
+				type	: "POST",
+				url		: $site_url+'ajax_request/get_selected_used_truck_new',
+				data	: 	{
+								used_payload:used_payload,
+								used_price_range:used_price_range,
+								used_state:used_state,
+								used_age:used_age
+						  	},
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+					
+					jQuery('#used-truck-list').html(data);
+				},
+				complete: function() {
+					$(".loaderform").hide();
+				},
+
+			});
+			return false;
+		
+	//}
+}
+
+function getPopupEnquiry(truck_name,model_no){
+
+	jQuery('#sendenq')[0].reset();
+
+		$("body").addClass("fixed"); 
+            $("#send-enq").show();
+            jQuery('#span-title').html(truck_name+' '+model_no);
+            $('#truck_name').val(truck_name);
+            $('#model_no').val(model_no);
+
+}
+
+
+
+jQuery(document).ready(function(){
+
+	//October
+  var itemsCounttag = 0,
+               itemsMaxtag = $('.outer_tag div.child_tag').length;
+            $('.outer_tag div.child_tag').hide();
+
+            function showNextItemstag() {
+               var pagination = 6;
+               
+               for (var i = itemsCounttag; i < (itemsCounttag + pagination); i++) {
+                  $('.outer_tag div.child_tag:eq(' + i + ')').show();
+               }
+
+               itemsCounttag += pagination;
+               
+               if (itemsCounttag > itemsMaxtag) {
+                  $('#showMoretag').hide();
+               }
+            };
+
+            showNextItemstag();
+
+            $('#showMoretag').on('click', function (e) {
+               e.preventDefault();
+               showNextItemstag();
+            });
+
+
+	jQuery('.number_only').keydown(function(event) {
+                // Allow special chars + arrows 
+                if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 
+                    || event.keyCode == 27 || event.keyCode == 13 
+                    || (event.keyCode == 65 && event.ctrlKey === true) 
+                    || (event.keyCode >= 35 && event.keyCode <= 39)){
+                        return;
+                }else {
+                    // If it's not a number stop the keypress
+                    if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+                        event.preventDefault(); 
+                    }   
+                }
+     });
+
+
+	// ------------------ Newsletter Start------------------------
+	
+	jQuery("#newsletter-submit").click(function(){ 
+		var newsletter		= jQuery("#newsletter").val();
+		//var emailRegex = new RegExp(/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$/i);
+		var valid = emailRegex.test(newsletter);
+		if (newsletter == "") {
+			jQuery("#error_newsletter").html("");
+			jQuery("#success_newsletter").html("");
+			jQuery("#error_newsletter").css("display", "block");
+			 jQuery('#newsletter').addClass('error1');
+			 jQuery('#error_newsletter').html('Please enter email address.');
+			 jQuery("#newsletter").focus(); 
+			 return false;
+		}else if (!valid) {
+			jQuery("#error_newsletter").html("");
+			jQuery("#success_newsletter").html("");
+			jQuery("#error_newsletter").css("display", "block");
+			 jQuery('#newsletter').addClass('error1');
+			 jQuery('#error_newsletter').html('Please enter valid email address.');
+			 jQuery("#newsletter").focus();
+			 return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+						//jQuery("#load-newsletter-img").css("display", "block");
+						$(".loaderform").show();
+						},
+				type	: "POST",
+				url		: $site_url+'front_form/newsletter_code',
+				data	: jQuery('#frm-newsletter').serialize(),
+				success: function (res) {  
+							data_arra = res.split('@@'); 
+							if(data_arra[0].trim()=="err"){
+								jQuery("#success_newsletter").html("");
+								jQuery("#newsletter").val("");
+								jQuery("#error_newsletter").css("display", "block");
+								jQuery("#error_newsletter").html("Already subscribed.");
+							}else if(data_arra[0].trim()=="succ"){ //alert(res);
+								jQuery("#newsletter").val("");
+								jQuery("#error_newsletter").html("");
+								jQuery("#success_newsletter").html("Subscribed Successfully.");
+								jQuery(".popup-thank.subscribethanks").show();
+							//jQuery('#success_newsletter').delay(3000).fadeOut('slow'); 	
+							}
+						},
+				complete: function() {
+					//jQuery("#load-newsletter-img").css("display", "none");
+					$(".loaderform").hide();
+				},
+			});
+			return false;
+		}
+	});
+
+	// October
+	jQuery("#blog-newsletter-submit").click(function(){ 
+		var blog_newsletter		= jQuery("#blog_newsletter").val();
+		//var emailRegex = new RegExp(/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$/i);
+		var valid = emailRegex.test(blog_newsletter);
+		if (blog_newsletter == "") {
+			jQuery("#error_blog_newsletter").html("");
+			jQuery("#success_blog_newsletter").html("");
+			jQuery("#error_blog_newsletter").css("display", "block");
+			 jQuery('#blog_newsletter').addClass('error1');
+			 jQuery('#error_blog_newsletter').html('Please enter email address.');
+			 jQuery("#blog_newsletter").focus(); 
+			 return false;
+		}else if (!valid) {
+			jQuery("#error_blog_newsletter").html("");
+			jQuery("#success_blog_newsletter").html("");
+			jQuery("#error_blog_newsletter").css("display", "block");
+			 jQuery('#blog_newsletter').addClass('error1');
+			 jQuery('#error_blog_newsletter').html('Please enter valid email address.');
+			 jQuery("#blog_newsletter").focus();
+			 return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+						//jQuery("#load-newsletter-img").css("display", "block");
+						$(".loaderform").show();
+						},
+				type	: "POST",
+				url		: $site_url+'front_form/newsletter_code',
+				data	: {newsletter:blog_newsletter},
+				success: function (res) {  
+							data_arra = res.split('@@'); 
+							if(data_arra[0].trim()=="err"){
+								jQuery("#success_blog_newsletter").html("");
+								jQuery("#blog_newsletter").val("");
+								jQuery("#error_blog_newsletter").css("display", "block");
+								jQuery("#error_blog_newsletter").html("Already subscribed.");
+							}else if(data_arra[0].trim()=="succ"){ //alert(res);
+								jQuery("#blog_newsletter").val("");
+								jQuery("#error_blog_newsletter").html("");
+								jQuery("#success_blog_newsletter").html("Subscribed Successfully.");
+								jQuery(".popup-thank.subscribethanks").show();
+							//jQuery('#success_newsletter').delay(3000).fadeOut('slow'); 	
+							}
+						},
+				complete: function() {
+					//jQuery("#load-newsletter-img").css("display", "none");
+					$(".loaderform").hide();
+				},
+			});
+			return false;
+		}
+	});
+
+	// Apply for new Dealership Start
+
+	jQuery("#adealersubmit").click(function(){  alert();
+		var name					= jQuery("#name").val();
+		var contact_number			= jQuery("#contact_number").val();
+		var email					= jQuery("#email").val();
+		var state					= jQuery("#state").val();
+		var city					= jQuery("#city").val();
+		var message					= jQuery("#message").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (name == "") {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter name.');
+			error_msg[count] ="name";
+			count++;
+		}else if (!regex.test(name)) {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter valid name.');
+			error_msg[count] ="name";
+			count++;
+		}
+		if (contact_number == ""){
+		    jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter contact number.');
+			error_msg[count] ="contact_number";
+			count++;;
+		}else if (isNaN(contact_number)){
+			jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please Insert Correct Numeric Contact Number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}else if ( contact_number.length!=10   ){
+		   	jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid 10 digits contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}
+
+		if (email == "") {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter email.');
+			error_msg[count] ="email";
+			count++;
+		}else if (emailRegex.test(email)==false) {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter valid email.');
+			error_msg[count] ="email";
+			count++;
+		}
+		if (state == "") {
+			jQuery('#state').addClass('error_border');
+			jQuery("#error_state").css("display", "block");
+			jQuery('#error_state').html('Please select state.');
+			error_msg[count] ="state";
+			count++;
+		}
+		if (city == "") {
+			jQuery('#city').addClass('error_border');
+			jQuery("#error_city").css("display", "block");
+			jQuery('#error_city').html('Please enter city.');
+			error_msg[count] ="city";
+			count++;
+		}
+		
+		if (message == "") {
+			jQuery('#message').addClass('error_border');
+			jQuery("#error_message").css("display", "block");
+			jQuery('#error_message').html('Please enter message.');
+			error_msg[count] ="message";
+			count++;
+		}
+		
+		
+		
+		
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#adealersubmit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/apply_for_dealership',
+				data	: jQuery('#adealerform').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#adealersubmit').removeAttr('disabled');
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#adealersubmit').removeAttr('disabled');
+						jQuery('#error_common').html(data_arra[2]);
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#adealersubmit').removeAttr('disabled');
+							jQuery('#adealerform')[0].reset();
+							jQuery(".popup-thank.contactthanks").show();
+					 }
+					 
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+					jQuery('#adealersubmit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+
+
+	});
+
+
+	// Apply for new Dealership Start
+
+	//Quick Query Start 
+
+	jQuery("#brochure-query").click(function(){ 
+		var brochure_name		= jQuery("#brochure_name").val();
+		var brochure_email				= jQuery("#brochure_email").val();
+		var brochure_mobile				= jQuery("#brochure_mobile").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (brochure_name == "") {
+			jQuery('#brochure_name').addClass('error_border');
+			
+			jQuery("#error_brochure_name").css("display", "block");
+			jQuery('#error_brochure_name').html('Please enter name.');
+			error_msg[count] ="brochure_name";
+			count++;
+		}else if (!regex.test(brochure_name)) {
+			jQuery('#brochure_name').addClass('error_border');
+			jQuery("#error_brochure_name").css("display", "block");
+			jQuery('#error_brochure_name').html('Please enter valid name.');
+			error_msg[count] ="brochure_name";
+			count++;
+		}
+		
+		if (brochure_email == "") {
+			jQuery('#brochure_email').addClass('error_border');
+			jQuery("#error_brochure_email").css("display", "block");
+			jQuery('#error_brochure_email').html('Please enter email.');
+			error_msg[count] ="brochure_email";
+			count++;
+		}else if (emailRegex.test(brochure_email)==false) {
+			jQuery('#brochure_email').addClass('error_border');
+			jQuery("#error_brochure_email").css("display", "block");
+			jQuery('#error_brochure_email').html('Please enter valid email.');
+			error_msg[count] ="brochure_email";
+			count++;
+		}
+		if (brochure_mobile == ""){
+	        jQuery('#brochure_mobile').addClass('error_border');
+	      jQuery("#error_brochure_mobile").css("display", "block");
+	      jQuery('#error_brochure_mobile').html('Please enter mobile number.');
+	      error_msg[count] ="brochure_mobile";
+	      count++;;
+	    }else if (isNaN(brochure_mobile)){
+	      jQuery('#brochure_mobile').addClass('error_border');
+	      jQuery("#error_brochure_mobile").css("display", "block");
+	      jQuery('#error_brochure_mobile').html('Please Insert Correct Numeric Mobile Number.');
+	      error_msg[count] ="brochure_mobile";
+	      count++;
+	    }else if ( brochure_mobile.length!=10   ){
+	        jQuery('#brochure_mobile').addClass('error_border');
+	      jQuery("#error_brochure_mobile").css("display", "block");
+	      jQuery('#error_brochure_mobile').html('Please enter valid 10 digits mobile number.');
+	      error_msg[count] ="brochure_mobile";
+	      count++;
+	    }
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#brochure-query').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/brochure_code',
+				data	: jQuery('#frmBrochure').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') { 
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#brochure-query').removeAttr('disabled');
+						
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#brochure-query').removeAttr('disabled');
+						jQuery('#error_brochure-query').html(data_arra[2]);
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#brochure-query').removeAttr('disabled');
+							//jQuery('#success_quick-query').html(data_arra[1]);
+							jQuery('#frmBrochure')[0].reset();
+							jQuery("#brochurepopup").fadeOut();
+							jQuery(".loaderform").hide();
+							jQuery(".popup-thank.brochurethanks").show();
+							jQuery('#brochure_trk').html('<a href="'+data_arra[1]+'" download="" target="_blank">Download Brochure</a>');
+							jQuery("#load-brochure-query-img").css("display", "none");
+					 }
+					 
+				},
+				complete: function() {
+					jQuery('#brochure-query').removeAttr('disabled');
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+		}
+	});
+
+	
+
+	jQuery("#truck-query-submit").click(function(){  
+		var enq_name				= jQuery("#enq_name").val();
+		var enq_email					= jQuery("#enq_email").val();
+		var enq_mobile					= jQuery("#enq_mobile").val();
+		var enq_state					= jQuery("#enq_state").val();
+		var enq_message					= jQuery("#enq_message").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (enq_name == "") {
+			jQuery('#enq_name').addClass('error_border');
+			jQuery("#error_enq_name").css("display", "block");
+			jQuery('#error_enq_name').html('Please enter name.');
+			error_msg[count] ="enq_name";
+			count++;
+		}else if (!regex.test(enq_name)) {
+			jQuery('#enq_name').addClass('error_border');
+			jQuery("#error_enq_name").css("display", "block");
+			jQuery('#error_enq_name').html('Please enter valid name.');
+			error_msg[count] ="enq_name";
+			count++;
+		}
+		if (enq_email == "") {
+			jQuery('#enq_email').addClass('error_border');
+			jQuery("#error_enq_email").css("display", "block");
+			jQuery('#error_enq_email').html('Please enter email.');
+			error_msg[count] ="enq_email";
+			count++;
+		}else if (emailRegex.test(enq_email)==false) {
+			jQuery('#enq_email').addClass('error_border');
+			jQuery("#error_enq_email").css("display", "block");
+			jQuery('#error_enq_email').html('Please enter valid email.');
+			error_msg[count] ="enq_email";
+			count++;
+		}
+		if (enq_mobile == ""){
+		    jQuery('#enq_mobile').addClass('error_border');
+			jQuery("#error_enq_mobile").css("display", "block");
+			jQuery('#error_enq_mobile').html('Please enter contact number.');
+			error_msg[count] ="enq_mobile";
+			count++;;
+		}else if (isNaN(enq_mobile)){
+			jQuery('#enq_mobile').addClass('error_border');
+			jQuery("#error_enq_mobile").css("display", "block");
+			jQuery('#error_enq_mobile').html('Please enter valid contact number.');
+			error_msg[count] ="enq_mobile";
+			count++;
+		}else if ( enq_mobile.length!=10   ){
+		   	jQuery('#enq_mobile').addClass('error_border');
+			jQuery("#error_enq_mobile").css("display", "block");
+			jQuery('#error_enq_mobile').html('Please enter valid 10 digits contact number.');
+			error_msg[count] ="enq_mobile";
+			count++;
+		}
+		
+		if (enq_state == "") {
+			jQuery('#enq_state').addClass('error_border');
+			jQuery("#error_enq_state").css("display", "block");
+			jQuery('#error_enq_state').html('Please select state.');
+			error_msg[count] ="enq_state";
+			count++;
+		}
+		
+		if (enq_message == "") {
+			jQuery('#enq_message').addClass('error_border');
+			jQuery("#error_enq_message").css("display", "block");
+			jQuery('#error_enq_message').html('Please enter additional information.');
+			error_msg[count] ="enq_message";
+			count++;
+		}
+		
+		
+		
+		
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#truck-query-submit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/truck_enquiry_code',
+				data	: jQuery('#frmTruckEnquiry').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#truck-query-submit').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#truck-query-submit').removeAttr('disabled');
+						jQuery('#error_work-with-us').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#truck-query-submit').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#frmTruckEnquiry')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							jQuery(".truckthanks").show();
+					 }
+					 
+				},
+				complete: function() {
+					
+					jQuery('#truck-query-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+
+	jQuery("#brochure-ib-query").click(function(){ 
+		var brochure_name		= jQuery("#brochure_name").val();
+		var brochure_email				= jQuery("#brochure_email").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (brochure_name == "") {
+			jQuery('#brochure_name').addClass('error_border');
+			
+			jQuery("#error_brochure_name").css("display", "block");
+			jQuery('#error_brochure_name').html('Please enter name.');
+			error_msg[count] ="brochure_name";
+			count++;
+		}else if (!regex.test(brochure_name)) {
+			jQuery('#brochure_name').addClass('error_border');
+			jQuery("#error_brochure_name").css("display", "block");
+			jQuery('#error_brochure_name').html('Please enter valid name.');
+			error_msg[count] ="brochure_name";
+			count++;
+		}
+		
+		if (brochure_email == "") {
+			jQuery('#brochure_email').addClass('error_border');
+			jQuery("#error_brochure_email").css("display", "block");
+			jQuery('#error_brochure_email').html('Please enter email.');
+			error_msg[count] ="brochure_email";
+			count++;
+		}else if (emailRegex.test(brochure_email)==false) {
+			jQuery('#brochure_email').addClass('error_border');
+			jQuery("#error_brochure_email").css("display", "block");
+			jQuery('#error_brochure_email').html('Please enter valid email.');
+			error_msg[count] ="brochure_email";
+			count++;
+		}
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#brochure-ib-query').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/ib_brochure_code',
+				data	: jQuery('#frmBrochure').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') { 
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#brochure-ib-query').removeAttr('disabled');
+						
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#brochure-ib-query').removeAttr('disabled');
+						jQuery('#error_brochure-query').html(data_arra[2]);
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#brochure-ib-query').removeAttr('disabled');
+							//jQuery('#success_quick-query').html(data_arra[1]);
+							jQuery('#frmBrochure')[0].reset();
+							jQuery(".popup-thank.brochurethanks").show();
+							jQuery('#brochure_trk').html('<a href="'+data_arra[1]+'" download="" target="_blank">Download Brochure</a>');
+							jQuery("#load-brochure-query-img").css("display", "none");
+					 }
+					 
+				},
+				complete: function() {
+					jQuery('#brochure-ib-query').removeAttr('disabled');
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+		}
+	});
+
+	
+
+	jQuery("#ib-query-submit").click(function(){  
+		var enq_name				= jQuery("#enq_name").val();
+		var enq_email					= jQuery("#enq_email").val();
+		var enq_mobile					= jQuery("#enq_mobile").val();
+		var enq_message					= jQuery("#enq_message").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (enq_name == "") {
+			jQuery('#enq_name').addClass('error_border');
+			jQuery("#error_enq_name").css("display", "block");
+			jQuery('#error_enq_name').html('Please enter name.');
+			error_msg[count] ="enq_name";
+			count++;
+		}else if (!regex.test(enq_name)) {
+			jQuery('#enq_name').addClass('error_border');
+			jQuery("#error_enq_name").css("display", "block");
+			jQuery('#error_enq_name').html('Please enter valid name.');
+			error_msg[count] ="enq_name";
+			count++;
+		}
+		if (enq_email == "") {
+			jQuery('#enq_email').addClass('error_border');
+			jQuery("#error_enq_email").css("display", "block");
+			jQuery('#error_enq_email').html('Please enter email.');
+			error_msg[count] ="enq_email";
+			count++;
+		}else if (emailRegex.test(enq_email)==false) {
+			jQuery('#enq_email').addClass('error_border');
+			jQuery("#error_enq_email").css("display", "block");
+			jQuery('#error_enq_email').html('Please enter valid email.');
+			error_msg[count] ="enq_email";
+			count++;
+		}
+		if (enq_mobile == ""){
+		    jQuery('#enq_mobile').addClass('error_border');
+			jQuery("#error_enq_mobile").css("display", "block");
+			jQuery('#error_enq_mobile').html('Please enter contact number.');
+			error_msg[count] ="enq_mobile";
+			count++;;
+		}else if (isNaN(enq_mobile)){
+			jQuery('#enq_mobile').addClass('error_border');
+			jQuery("#error_enq_mobile").css("display", "block");
+			jQuery('#error_enq_mobile').html('Please enter valid contact number.');
+			error_msg[count] ="enq_mobile";
+			count++;
+		}else if ( enq_mobile.length!=10   ){
+		   	jQuery('#enq_mobile').addClass('error_border');
+			jQuery("#error_enq_mobile").css("display", "block");
+			jQuery('#error_enq_mobile').html('Please enter valid 10 digits contact number.');
+			error_msg[count] ="enq_mobile";
+			count++;
+		}
+		
+		
+		if (enq_message == "") {
+			jQuery('#enq_message').addClass('error_border');
+			jQuery("#error_enq_message").css("display", "block");
+			jQuery('#error_enq_message').html('Please enter additional information.');
+			error_msg[count] ="enq_message";
+			count++;
+		}
+		
+		
+		
+		
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#ib-query-submit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/ib_enquiry_code',
+				data	: jQuery('#frmTruckEnquiry').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#ib-query-submit').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#ib-query-submit').removeAttr('disabled');
+						jQuery('#error_work-with-us').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#ib-query-submit').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#frmTruckEnquiry')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							jQuery(".truckthanks").show();
+					 }
+					 
+				},
+				complete: function() {
+					
+					jQuery('#ib-query-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+
+
+	
+	jQuery("#contact-us-submit").click(function(){    
+		//var title							= jQuery("#title").val();
+		var name							= jQuery("#name").val();
+		var contact_number					= jQuery("#contact_number").val();
+		var email							= jQuery("#email").val();
+		//var country							= jQuery("#country").val();
+		var state							= jQuery("#state").val();
+		var city							= jQuery("#city").val();
+		//var pincode							= jQuery("#pincode").val();
+		var you_want_to_contact_us_for		= jQuery("#you_want_to_contact_us_for").val();
+		//var subject							= jQuery("#subject").val();
+		var message							= jQuery("#message").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		/*if (title == "") {
+			jQuery('#title').addClass('error_border');
+			jQuery("#error_title").css("display", "block");
+			jQuery('#error_title').html('Please select title.');
+			error_msg[count] ="title";
+			count++;
+		}*/if (name == "") {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter name.');
+			error_msg[count] ="name";
+			count++;
+		}else if (!regex.test(name)) {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter valid name.');
+			error_msg[count] ="name";
+			count++;
+		}
+		if (contact_number == ""){
+		    jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter contact number.');
+			error_msg[count] ="contact_number";
+			count++;;
+		}else if (isNaN(contact_number)){
+			jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}else if ( contact_number.length!=10   ){
+		   	jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid 10 digits contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}
+		if (email == "") {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter email.');
+			error_msg[count] ="email";
+			count++;
+		}else if (emailRegex.test(email)==false) {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter valid email.');
+			error_msg[count] ="email";
+			count++;
+		}
+		/*if (country == "") {
+			jQuery('#country').addClass('error_border');
+			jQuery("#error_country").css("display", "block");
+			jQuery('#error_country').html('Please enter country.');
+			error_msg[count] ="country";
+			count++;
+		}*/
+		if (state == "") {
+			jQuery('#state').addClass('error_border');
+			jQuery("#error_state").css("display", "block");
+			jQuery('#error_state').html('Please enter province.');
+			error_msg[count] ="state";
+			count++;
+		}
+		if (city == "") {
+			jQuery('#city').addClass('error_border');
+			jQuery("#error_city").css("display", "block");
+			jQuery('#error_city').html('Please enter city.');
+			error_msg[count] ="city";
+			count++;
+		}
+		/*if (pincode == "") {
+			jQuery('#pincode').addClass('error_border');
+			jQuery("#error_pincode").css("display", "block");
+			jQuery('#error_pincode').html('Please enter pincode.');
+			error_msg[count] ="pincode";
+			count++;
+		} */
+		if (you_want_to_contact_us_for == "") {
+			jQuery('#you_want_to_contact_us_for').addClass('error_border');
+			jQuery("#error_you_want_to_contact_us_for").css("display", "block");
+			jQuery('#error_you_want_to_contact_us_for').html('Please select inquery type.');
+			error_msg[count] ="you_want_to_contact_us_for";
+			count++;
+		}
+		/*if (subject == "") {
+			jQuery('#subject').addClass('error_border');
+			jQuery("#error_subject").css("display", "block");
+			jQuery('#error_subject').html('Please enter subject.');
+			error_msg[count] ="subject";
+			count++;
+		} */
+		if (message == "") {
+			jQuery('#message').addClass('error_border');
+			jQuery("#error_message").css("display", "block");
+			jQuery('#error_message').html('Please enter message.');
+			error_msg[count] ="message";
+			count++;
+		}
+		
+		
+		
+		
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#contact-us-submit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/contact_us_code',
+				data	: jQuery('#frmContactUs').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#contact-us-submit').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#contact-us-submit').removeAttr('disabled');
+						jQuery('#error_work-with-us').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#contact-us-submit').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#frmContactUs')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							jQuery(".contactthanks").show();
+					 }
+					 
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+					jQuery('#contact-us-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+	jQuery("#buy-exchange-submit").click(function(){    
+		var name							= jQuery("#name").val();
+		var contact_number					= jQuery("#contact_number").val();
+		var email							= jQuery("#email").val();
+		var state							= jQuery("#state").val();
+		var city							= jQuery("#city").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (name == "") {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter name.');
+			error_msg[count] ="name";
+			count++;
+		}else if (!regex.test(name)) {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter valid name.');
+			error_msg[count] ="name";
+			count++;
+		}
+		if (contact_number == ""){
+		    jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter contact number.');
+			error_msg[count] ="contact_number";
+			count++;;
+		}else if (isNaN(contact_number)){
+			jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}else if ( contact_number.length!=10   ){
+		   	jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid 10 digits contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}
+		if (email == "") {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter email.');
+			error_msg[count] ="email";
+			count++;
+		}else if (emailRegex.test(email)==false) {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter valid email.');
+			error_msg[count] ="email";
+			count++;
+		}
+		if (state == "") {
+			jQuery('#state').addClass('error_border');
+			jQuery("#error_state").css("display", "block");
+			jQuery('#error_state').html('Please enter province.');
+			error_msg[count] ="state";
+			count++;
+		}
+		if (city == "") {
+			jQuery('#city').addClass('error_border');
+			jQuery("#error_city").css("display", "block");
+			jQuery('#error_city').html('Please enter city.');
+			error_msg[count] ="city";
+			count++;
+		}
+		
+		
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#buy-exchange-submit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/used_buy_exchange_code',
+				data	: jQuery('#advantageform').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#buy-exchange-submit').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#buy-exchange-submit').removeAttr('disabled');
+						jQuery('#error_buy-exchange-submit').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#buy-exchange-submit').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#advantageform')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							jQuery(".truckenquiry").show();
+					 }
+					 
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+					jQuery('#buy-exchange-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+
+
+	jQuery("#used-enquiry-submit").click(function(){    
+		var name							= jQuery("#name").val();
+		var contact_number					= jQuery("#contact_number").val();
+		var email							= jQuery("#email").val();
+		var state							= jQuery("#state").val();
+		var city							= jQuery("#city").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (name == "") {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter name.');
+			error_msg[count] ="name";
+			count++;
+		}else if (!regex.test(name)) {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter valid name.');
+			error_msg[count] ="name";
+			count++;
+		}
+
+		if (email == "") {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter email.');
+			error_msg[count] ="email";
+			count++;
+		}else if (emailRegex.test(email)==false) {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter valid email.');
+			error_msg[count] ="email";
+			count++;
+		}
+		if (contact_number == ""){
+		    jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter contact number.');
+			error_msg[count] ="contact_number";
+			count++;;
+		}else if (isNaN(contact_number)){
+			jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}else if ( contact_number.length!=10   ){
+		   	jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid 10 digits contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}
+		if (state == "") {
+			jQuery('#state').addClass('error_border');
+			jQuery("#error_state").css("display", "block");
+			jQuery('#error_state').html('Please enter province.');
+			error_msg[count] ="state";
+			count++;
+		}
+		if (city == "") {
+			jQuery('#city').addClass('error_border');
+			jQuery("#error_city").css("display", "block");
+			jQuery('#error_city').html('Please enter city.');
+			error_msg[count] ="city";
+			count++;
+		}
+		
+		
+		
+		
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#used-enquiry-submit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/used_truck_query_code',
+				data	: jQuery('#sendenqfrm').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#used-enquiry-submit').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#used-enquiry-submit').removeAttr('disabled');
+						jQuery('#error_work-with-us').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#used-enquiry-submit').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#sendenqfrm')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							//$("body").addClass("fixed"); 
+           						 $("#send-enq").hide();
+							jQuery(".truckenquiry").show();
+					 }
+					 
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+					jQuery('#used-enquiry-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+
+	jQuery("#used-finance-submit").click(function(){    
+		var name							= jQuery("#name").val();
+		var contact_number					= jQuery("#contact_number").val();
+		var email							= jQuery("#email").val();
+		var state							= jQuery("#state").val();
+		var city							= jQuery("#city").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (name == "") {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter name.');
+			error_msg[count] ="name";
+			count++;
+		}else if (!regex.test(name)) {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter valid name.');
+			error_msg[count] ="name";
+			count++;
+		}
+
+		if (email == "") {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter email.');
+			error_msg[count] ="email";
+			count++;
+		}else if (emailRegex.test(email)==false) {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter valid email.');
+			error_msg[count] ="email";
+			count++;
+		}
+		if (contact_number == ""){
+		    jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter contact number.');
+			error_msg[count] ="contact_number";
+			count++;;
+		}else if (isNaN(contact_number)){
+			jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}else if ( contact_number.length!=10   ){
+		   	jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid 10 digits contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}
+		if (state == "") {
+			jQuery('#state').addClass('error_border');
+			jQuery("#error_state").css("display", "block");
+			jQuery('#error_state').html('Please enter province.');
+			error_msg[count] ="state";
+			count++;
+		}
+		if (city == "") {
+			jQuery('#city').addClass('error_border');
+			jQuery("#error_city").css("display", "block");
+			jQuery('#error_city').html('Please enter city.');
+			error_msg[count] ="city";
+			count++;
+		}
+		
+		
+		
+		
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#used-finance-submit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/used_truck_finance_code',
+				data	: jQuery('#financeform').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#used-finance-submit').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#used-finance-submit').removeAttr('disabled');
+						jQuery('#error_work-with-us').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#used-finance-submit').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#financeform')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							//$("body").addClass("fixed"); 
+           						 $("#finance-form").hide();
+							jQuery(".financethanks").show();
+					 }
+					 
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+					jQuery('#used-finance-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+
+	jQuery("#brochure-ut-query").click(function(){ 
+		var brochure_name		= jQuery("#brochure_name").val();
+		var brochure_email				= jQuery("#brochure_email").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (brochure_name == "") {
+			jQuery('#brochure_name').addClass('error_border');
+			
+			jQuery("#error_brochure_name").css("display", "block");
+			jQuery('#error_brochure_name').html('Please enter name.');
+			error_msg[count] ="brochure_name";
+			count++;
+		}else if (!regex.test(brochure_name)) {
+			jQuery('#brochure_name').addClass('error_border');
+			jQuery("#error_brochure_name").css("display", "block");
+			jQuery('#error_brochure_name').html('Please enter valid name.');
+			error_msg[count] ="brochure_name";
+			count++;
+		}
+		
+		if (brochure_email == "") {
+			jQuery('#brochure_email').addClass('error_border');
+			jQuery("#error_brochure_email").css("display", "block");
+			jQuery('#error_brochure_email').html('Please enter email.');
+			error_msg[count] ="brochure_email";
+			count++;
+		}else if (emailRegex.test(brochure_email)==false) {
+			jQuery('#brochure_email').addClass('error_border');
+			jQuery("#error_brochure_email").css("display", "block");
+			jQuery('#error_brochure_email').html('Please enter valid email.');
+			error_msg[count] ="brochure_email";
+			count++;
+		}
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#brochure-ut-query').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/used_truck_brochure_code',
+				data	: jQuery('#frmUTBrochure').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') { 
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#brochure-ut-query').removeAttr('disabled');
+						
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#brochure-ut-query').removeAttr('disabled');
+						jQuery('#error_brochure-query').html(data_arra[2]);
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#brochure-ut-query').removeAttr('disabled');
+							//jQuery('#success_quick-query').html(data_arra[1]);
+							jQuery('#frmUTBrochure')[0].reset();
+							jQuery(".popup-thank.brochurethanks").show();
+							jQuery('#brochure_trk').html('<a href="'+data_arra[1]+'" download="" target="_blank">Download Brochure</a>');
+							jQuery("#load-brochure-query-img").css("display", "none");
+					 }
+					 
+				},
+				complete: function() {
+					jQuery('#brochure-ut-query').removeAttr('disabled');
+					jQuery(".loaderform").hide();
+				},
+
+			});
+			return false;
+		}
+	});
+
+	
+$("#exchangeform").on('submit',(function(e){
+      e.preventDefault();
+          $.ajax({
+                url: $site_url+'front_form/used_truck_exchange_code',
+                type: "POST",
+                data:  new FormData(this),
+                contentType: false,
+                cache: false,
+                processData:false,
+                beforeSend: function () { 
+                    //jQuery(".loaderform").show();
+                   // jQuery('#used-exchange-submit').attr('disabled','disabled');
+
+                    var name              = jQuery("#name").val();
+                    var contact_number          = jQuery("#contact_number").val();
+                    var email             = jQuery("#email").val();
+                    var no_of_tyres           = jQuery("#no_of_tyres").val();
+                    var make              = jQuery("#make").val();
+                    var model_name            = jQuery("#model_name").val();
+                    var state             = jQuery("#state").val();
+                    var city              = jQuery("#city").val();
+                    var year_of_manufacturing     = jQuery("#year_of_manufacturing").val();
+                    
+                    
+                    var error_msg =[];
+                    var count =0 ;    
+                    
+                    if (name == "") {
+                      jQuery('#name').addClass('error_border');
+                      jQuery("#error_name").css("display", "block");
+                      jQuery('#error_name').html('Please enter name.');
+                      error_msg[count] ="name";
+                      count++;
+                    }else if (!regex.test(name)) {
+                      jQuery('#name').addClass('error_border');
+                      jQuery("#error_name").css("display", "block");
+                      jQuery('#error_name').html('Please enter valid name.');
+                      error_msg[count] ="name";
+                      count++;
+                    }
+
+                    if (email == "") {
+                      jQuery('#email').addClass('error_border');
+                      jQuery("#error_email").css("display", "block");
+                      jQuery('#error_email').html('Please enter email.');
+                      error_msg[count] ="email";
+                      count++;
+                    }else if (emailRegex.test(email)==false) {
+                      jQuery('#email').addClass('error_border');
+                      jQuery("#error_email").css("display", "block");
+                      jQuery('#error_email').html('Please enter valid email.');
+                      error_msg[count] ="email";
+                      count++;
+                    }
+                    if (contact_number == ""){
+                        jQuery('#contact_number').addClass('error_border');
+                      jQuery("#error_contact_number").css("display", "block");
+                      jQuery('#error_contact_number').html('Please enter contact number.');
+                      error_msg[count] ="contact_number";
+                      count++;;
+                    }else if (isNaN(contact_number)){
+                      jQuery('#contact_number').addClass('error_border');
+                      jQuery("#error_contact_number").css("display", "block");
+                      jQuery('#error_contact_number').html('Please enter valid contact number.');
+                      error_msg[count] ="contact_number";
+                      count++;
+                    }else if ( contact_number.length!=10   ){
+                        jQuery('#contact_number').addClass('error_border');
+                      jQuery("#error_contact_number").css("display", "block");
+                      jQuery('#error_contact_number').html('Please enter valid 10 digits contact number.');
+                      error_msg[count] ="contact_number";
+                      count++;
+                    }
+                    if (no_of_tyres == "") {
+                      jQuery('#no_of_tyres').addClass('error_border');
+                      jQuery("#error_no_of_tyres").css("display", "block");
+                      jQuery('#error_no_of_tyres').html('Please select no. of tyres.');
+                      error_msg[count] ="no_of_tyres";
+                      count++;
+                    }
+                    if (make == "") {
+                      jQuery('#make').addClass('error_border');
+                      jQuery("#error_make").css("display", "block");
+                      jQuery('#error_make').html('Please select make.');
+                      error_msg[count] ="make";
+                      count++;
+                    }
+                    if (model_name == "") {
+                      jQuery('#model_name').addClass('error_border');
+                      jQuery("#error_model_name").css("display", "block");
+                      jQuery('#error_model_name').html('Please enter model name.');
+                      error_msg[count] ="model_name";
+                      count++;
+                    }
+                    if (state == "") {
+                      jQuery('#state').addClass('error_border');
+                      jQuery("#error_state").css("display", "block");
+                      jQuery('#error_state').html('Please select state.');
+                      error_msg[count] ="state";
+                      count++;
+                    }
+                    if (city == "") {
+                      jQuery('#city').addClass('error_border');
+                      jQuery("#error_city").css("display", "block");
+                      jQuery('#error_city').html('Please enter city.');
+                      error_msg[count] ="city";
+                      count++;
+                    }
+                    if (year_of_manufacturing == "") {
+                      jQuery('#year_of_manufacturing').addClass('error_border');
+                      jQuery("#error_year_of_manufacturing").css("display", "block");
+                      jQuery('#error_year_of_manufacturing').html('Please enter year of manufacturing.');
+                      error_msg[count] ="year_of_manufacturing";
+                      count++;
+                    }
+                    if($('[name="loan"]:checked').length<=0){
+                      //jQuery('#year_of_manufacturing').addClass('error_border');
+                      jQuery("#error_loan").css("display", "block");
+                      jQuery('#error_loan').html('Please select loan.');
+                      error_msg[count] ="loan";
+                      count++;
+                    }
+                    if($('[name="new"]:checked').length<=0){
+                      //jQuery('#year_of_manufacturing').addClass('error_border');
+                      jQuery("#error_new").css("display", "block");
+                      jQuery('#error_new').html('Please select one option.');
+                      error_msg[count] ="new";
+                      count++;
+                    }
+                    if(count>0){
+                      jQuery('#'+error_msg[0]).focus();
+                      return false;
+                    } else {
+                      jQuery(".loaderform").show();
+                      jQuery('#used-exchange-submit').attr('disabled','disabled');
+                    }
+                },
+                success: function(data){
+                  data_arra = data.split('@@'); 
+            
+                   if(data_arra[0].trim()=='error') {  
+                    jQuery("#error_"+data_arra[1]).css("display", "block");
+                    jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+                    jQuery('#'+data_arra[1]).focus();
+                    jQuery('#used-exchange-submit').removeAttr('disabled');
+                    jQuery(".loaderform").hide();
+                   } else if(data_arra[0].trim()=='error_common') {
+                    jQuery('#used-exchange-submit').removeAttr('disabled');
+                    jQuery('#error_common').html(data_arra[2]);
+                    jQuery(".loaderform").hide();
+                   }else  if(data_arra[0].trim()=='success'){
+                      jQuery('#used-exchange-submit').removeAttr('disabled');
+                      //jQuery('#success_work-with-us').html(data_arra[1]);
+                      jQuery(".loaderform").hide();
+                      jQuery('#exchangeform')[0].reset();
+                      //window.location.href=$site_url+'thank-you';
+                      //$("body").addClass("fixed"); 
+                            $("#finance-form").hide();
+                      jQuery(".popup-thank.exchangethanks").show();
+                   }
+                },
+                error: function(){}           
+          });
+    }));
+
+
+jQuery("#feap-proceed-btn").click(function(){    
+		var name					= jQuery("#name").val();
+		var mobile					= jQuery("#mobile").val();
+		var email					= jQuery("#email").val();
+		var address					= jQuery("#address").val();
+		var model_purchased			= jQuery("#model_purchased").val();
+		var date_of_purchase		= jQuery("#date_of_purchase").val();
+		var chassis_number			= jQuery("#chassis_number").val();
+		var route_operation			= jQuery("#route_operation").val();
+		var competition_model		= jQuery("#competition_model").val();
+		var vehicle_registration_date= jQuery("#vehicle_registration_date").val();
+		var km_reading				= jQuery("#km_reading").val();
+		var average					= jQuery("#average").val();
+		var complaint				= jQuery("#complaint").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (name == "") {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter name.');
+			error_msg[count] ="name";
+			count++;
+		}else if (!regex.test(name)) {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter valid name.');
+			error_msg[count] ="name";
+			count++;
+		}
+
+		if (email == "") {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter email.');
+			error_msg[count] ="email";
+			count++;
+		}else if (emailRegex.test(email)==false) {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter valid email.');
+			error_msg[count] ="email";
+			count++;
+		}
+		if (mobile == ""){
+		    jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter mobile number.');
+			error_msg[count] ="mobile";
+			count++;;
+		}else if (isNaN(mobile)){
+			jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter valid mobile number.');
+			error_msg[count] ="mobile";
+			count++;
+		}else if ( mobile.length!=10   ){
+		   	jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter valid 10 digits mobile number.');
+			error_msg[count] ="mobile";
+			count++;
+		}
+		if (address == "") {
+			jQuery('#address').addClass('error_border');
+			jQuery("#error_address").css("display", "block");
+			jQuery('#error_address').html('Please enter address.');
+			error_msg[count] ="address";
+			count++;
+		}
+		if (model_purchased == "") {
+			jQuery('#model_purchased').addClass('error_border');
+			jQuery("#error_model_purchased").css("display", "block");
+			jQuery('#error_model_purchased').html('Please select model purchased.');
+			error_msg[count] ="model_purchased";
+			count++;
+		}
+		if (date_of_purchase == "") {
+			jQuery('#date_of_purchase').addClass('error_border');
+			jQuery("#error_date_of_purchase").css("display", "block");
+			jQuery('#error_date_of_purchase').html('Please enter date of purchase.');
+			error_msg[count] ="date_of_purchase";
+			count++;
+		}
+		if (chassis_number == "") {
+			jQuery('#chassis_number').addClass('error_border');
+			jQuery("#error_chassis_number").css("display", "block");
+			jQuery('#error_chassis_number').html('Please enter chassis number.');
+			error_msg[count] ="chassis_number";
+			count++;
+		}
+		if (route_operation == "") {
+			jQuery('#route_operation').addClass('error_border');
+			jQuery("#error_route_operation").css("display", "block");
+			jQuery('#error_route_operation').html('Please enter route of operation.');
+			error_msg[count] ="route_operation";
+			count++;
+		}
+		if (competition_model == "") {
+			jQuery('#competition_model').addClass('error_border');
+			jQuery("#error_competition_model").css("display", "block");
+			jQuery('#error_competition_model').html('Please enter competition model.');
+			error_msg[count] ="competition_model";
+			count++;
+		}
+		if (vehicle_registration_date == "") {
+			jQuery('#vehicle_registration_date').addClass('error_border');
+			jQuery("#error_vehicle_registration_date").css("display", "block");
+			jQuery('#error_vehicle_registration_date').html('Please enter vehicle registration date.');
+			error_msg[count] ="vehicle_registration_date";
+			count++;
+		}
+		if (km_reading == "") {
+			jQuery('#km_reading').addClass('error_border');
+			jQuery("#error_km_reading").css("display", "block");
+			jQuery('#error_km_reading').html('Please enter km reading.');
+			error_msg[count] ="km_reading";
+			count++;
+		}
+		if (average == "") {
+			jQuery('#average').addClass('error_border');
+			jQuery("#error_average").css("display", "block");
+			jQuery('#error_average').html('Please enter average.');
+			error_msg[count] ="average";
+			count++;
+		}
+		if (complaint == "") {
+			jQuery('#complaint').addClass('error_border');
+			jQuery("#error_complaint").css("display", "block");
+			jQuery('#error_complaint').html('Please enter complaint.');
+			error_msg[count] ="complaint";
+			count++;
+		}
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			$(".feap-tc").show();
+         $(".feap-tc").addClass('formbtn');
+			return false;
+		}
+	});
+
+	jQuery("#feap-submit-btn").click(function(){  
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#feap-submit-btn').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/submit_feap',
+				data	: jQuery('#claimformfeap').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#feap-submit-btn').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#feap-submit-btn').removeAttr('disabled');
+						jQuery('#error_common').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#feap-submit-btn').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#claimformfeap')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							//$("body").addClass("fixed"); 
+           						 $("#finance-form").hide();
+							//jQuery(".financethanks").show();
+							window.location.href=$site_url+'feap/thank-you';
+					 }
+					 
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+					jQuery('#used-finance-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+
+	});
+
+
+	jQuery("#pfea-proceed-btn").click(function(){    
+		var name					= jQuery("#name").val();
+		var mobile					= jQuery("#mobile").val();
+		var email					= jQuery("#email").val();
+		var address					= jQuery("#address").val();
+		var model_purchased			= jQuery("#model_purchased").val();
+		var date_of_purchase		= jQuery("#date_of_purchase").val();
+		var chassis_number			= jQuery("#chassis_number").val();
+		var route_operation			= jQuery("#route_operation").val();
+		var competition_model		= jQuery("#competition_model").val();
+		var vehicle_registration_date= jQuery("#vehicle_registration_date").val();
+		var km_reading				= jQuery("#km_reading").val();
+		var average					= jQuery("#average").val();
+		var complaint				= jQuery("#complaint").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (name == "") {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter name.');
+			error_msg[count] ="name";
+			count++;
+		}else if (!regex.test(name)) {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter valid name.');
+			error_msg[count] ="name";
+			count++;
+		}
+
+		if (email == "") {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter email.');
+			error_msg[count] ="email";
+			count++;
+		}else if (emailRegex.test(email)==false) {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter valid email.');
+			error_msg[count] ="email";
+			count++;
+		}
+		if (mobile == ""){
+		    jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter mobile number.');
+			error_msg[count] ="mobile";
+			count++;;
+		}else if (isNaN(mobile)){
+			jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter valid mobile number.');
+			error_msg[count] ="mobile";
+			count++;
+		}else if ( mobile.length!=10   ){
+		   	jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter valid 10 digits mobile number.');
+			error_msg[count] ="mobile";
+			count++;
+		}
+		if (address == "") {
+			jQuery('#address').addClass('error_border');
+			jQuery("#error_address").css("display", "block");
+			jQuery('#error_address').html('Please enter address.');
+			error_msg[count] ="address";
+			count++;
+		}
+		if (model_purchased == "") {
+			jQuery('#model_purchased').addClass('error_border');
+			jQuery("#error_model_purchased").css("display", "block");
+			jQuery('#error_model_purchased').html('Please select model purchased.');
+			error_msg[count] ="model_purchased";
+			count++;
+		}
+		if (date_of_purchase == "") {
+			jQuery('#date_of_purchase').addClass('error_border');
+			jQuery("#error_date_of_purchase").css("display", "block");
+			jQuery('#error_date_of_purchase').html('Please enter date of purchase.');
+			error_msg[count] ="date_of_purchase";
+			count++;
+		}
+		if (chassis_number == "") {
+			jQuery('#chassis_number').addClass('error_border');
+			jQuery("#error_chassis_number").css("display", "block");
+			jQuery('#error_chassis_number').html('Please enter chassis number.');
+			error_msg[count] ="chassis_number";
+			count++;
+		}
+		if (route_operation == "") {
+			jQuery('#route_operation').addClass('error_border');
+			jQuery("#error_route_operation").css("display", "block");
+			jQuery('#error_route_operation').html('Please enter route of operation.');
+			error_msg[count] ="route_operation";
+			count++;
+		}
+		if (competition_model == "") {
+			jQuery('#competition_model').addClass('error_border');
+			jQuery("#error_competition_model").css("display", "block");
+			jQuery('#error_competition_model').html('Please enter competition model.');
+			error_msg[count] ="competition_model";
+			count++;
+		}
+		if (vehicle_registration_date == "") {
+			jQuery('#vehicle_registration_date').addClass('error_border');
+			jQuery("#error_vehicle_registration_date").css("display", "block");
+			jQuery('#error_vehicle_registration_date').html('Please enter vehicle registration date.');
+			error_msg[count] ="vehicle_registration_date";
+			count++;
+		}
+		if (km_reading == "") {
+			jQuery('#km_reading').addClass('error_border');
+			jQuery("#error_km_reading").css("display", "block");
+			jQuery('#error_km_reading').html('Please enter km reading.');
+			error_msg[count] ="km_reading";
+			count++;
+		}
+		if (average == "") {
+			jQuery('#average').addClass('error_border');
+			jQuery("#error_average").css("display", "block");
+			jQuery('#error_average').html('Please enter average.');
+			error_msg[count] ="average";
+			count++;
+		}
+		if (complaint == "") {
+			jQuery('#complaint').addClass('error_border');
+			jQuery("#error_complaint").css("display", "block");
+			jQuery('#error_complaint').html('Please enter complaint.');
+			error_msg[count] ="complaint";
+			count++;
+		}
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			$(".feap-tc").show();
+         $(".feap-tc").addClass('formbtn');
+			return false;
+		}
+	});
+
+	jQuery("#pfea-submit-btn").click(function(){  
+
+		jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#pfea-submit-btn').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/submit_pfea',
+				data	: jQuery('#claimformpfea').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#pfea-submit-btn').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#pfea-submit-btn').removeAttr('disabled');
+						jQuery('#error_common').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#pfea-submit-btn').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#claimformpfea')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							//$("body").addClass("fixed"); 
+           						 $("#finance-form").hide();
+							//jQuery(".financethanks").show();
+							window.location.href=$site_url+'pfea/thank-you';
+					 }
+					 
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+					jQuery('#used-finance-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+
+	});
+
+
+
+
+	
+	// Home popup Form
+jQuery("#popup-submit").click(function(){  
+		var popup_name				= jQuery("#popup_name").val();
+		var popup_contact_number	= jQuery("#popup_contact_number").val();
+		var popup_email				= jQuery("#popup_email").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (popup_name == "") {
+			jQuery('#popup_name').addClass('error_border');
+			jQuery("#error_popup_name").css("display", "block");
+			jQuery('#error_popup_name').html('Please enter name.');
+			error_msg[count] ="popup_name";
+			count++;
+		}else if (!regex.test(popup_name)) {
+			jQuery('#popup_name').addClass('error_border');
+			jQuery("#error_popup_name").css("display", "block");
+			jQuery('#error_popup_name').html('Please enter valid name.');
+			error_msg[count] ="popup_name";
+			count++;
+		}
+		if (popup_contact_number == ""){
+		    jQuery('#popup_contact_number').addClass('error_border');
+			jQuery("#error_popup_contact_number").css("display", "block");
+			jQuery('#error_popup_contact_number').html('Please enter contact number.');
+			error_msg[count] ="popup_contact_number";
+			count++;;
+		}else if (isNaN(popup_contact_number)){
+			jQuery('#popup_contact_number').addClass('error_border');
+			jQuery("#error_popup_contact_number").css("display", "block");
+			jQuery('#error_popup_contact_number').html('Please enter valid contact number.');
+			error_msg[count] ="popup_contact_number";
+			count++;
+		}else if ( popup_contact_number.length!=10   ){
+		   	jQuery('#popup_contact_number').addClass('error_border');
+			jQuery("#error_popup_contact_number").css("display", "block");
+			jQuery('#error_popup_contact_number').html('Please enter valid 10 digits contact number.');
+			error_msg[count] ="popup_contact_number";
+			count++;
+		}
+		if (popup_email == "") {
+			jQuery('#popup_email').addClass('error_border');
+			jQuery("#error_popup_email").css("display", "block");
+			jQuery('#error_popup_email').html('Please enter email.');
+			error_msg[count] ="popup_email";
+			count++;
+		}else if (emailRegex.test(popup_email)==false) {
+			jQuery('#popup_email').addClass('error_border');
+			jQuery("#error_popup_email").css("display", "block");
+			jQuery('#error_popup_email').html('Please enter valid email.');
+			error_msg[count] ="popup_email";
+			count++;
+		}
+		
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery("#load-popup-img").css("display", "block");
+					jQuery('#popup-submit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/popup_code',
+				data	: jQuery('#frmHomePopup').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#popup-submit').removeAttr('disabled');
+						jQuery("#load-popup-img").css("display", "none");
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#popup-submit').removeAttr('disabled');
+						jQuery('#error_popup').html(data_arra[2]);
+						jQuery("#load-popup-img").css("display", "none");
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#popup-submit').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery("#load-popup-img").css("display", "none");
+							jQuery('#frmHomePopup')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							jQuery(".truckthanks").show();
+					 }
+					 
+				},
+				complete: function() {
+					jQuery("#load-popup-img").css("display", "none");
+					jQuery('#popup-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+
+	// Work with us end
+	jQuery("#dealership-submit").click(function(){  
+		var title							= jQuery("#title").val();
+		var name							= jQuery("#name").val();
+		var contact_number					= jQuery("#contact_number").val();
+		var email							= jQuery("#email").val();
+		var country							= jQuery("#country").val();
+		var state							= jQuery("#state").val();
+		var city							= jQuery("#city").val();
+		var remark							= jQuery("#remark").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (title == "") {
+			jQuery('#title').addClass('error_border');
+			jQuery("#error_title").css("display", "block");
+			jQuery('#error_title').html('Please select title.');
+			error_msg[count] ="title";
+			count++;
+		}if (name == "") {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter name.');
+			error_msg[count] ="name";
+			count++;
+		}else if (!regex.test(name)) {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter valid name.');
+			error_msg[count] ="name";
+			count++;
+		}
+		if (contact_number == ""){
+		    jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter contact number.');
+			error_msg[count] ="contact_number";
+			count++;;
+		}else if (isNaN(contact_number)){
+			jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}else if ( contact_number.length!=10   ){
+		   	jQuery('#contact_number').addClass('error_border');
+			jQuery("#error_contact_number").css("display", "block");
+			jQuery('#error_contact_number').html('Please enter valid 10 digits contact number.');
+			error_msg[count] ="contact_number";
+			count++;
+		}
+		if (email == "") {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter email.');
+			error_msg[count] ="email";
+			count++;
+		}else if (emailRegex.test(email)==false) {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter valid email.');
+			error_msg[count] ="email";
+			count++;
+		}
+		if (country == "") {
+			jQuery('#country').addClass('error_border');
+			jQuery("#error_country").css("display", "block");
+			jQuery('#error_country').html('Please enter country.');
+			error_msg[count] ="country";
+			count++;
+		}
+		if (state == "") {
+			jQuery('#state').addClass('error_border');
+			jQuery("#error_state").css("display", "block");
+			jQuery('#error_state').html('Please enter province.');
+			error_msg[count] ="state";
+			count++;
+		}
+		if (city == "") {
+			jQuery('#city').addClass('error_border');
+			jQuery("#error_city").css("display", "block");
+			jQuery('#error_city').html('Please enter city.');
+			error_msg[count] ="city";
+			count++;
+		}
+		
+		if (remark == "") {
+			jQuery('#remark').addClass('error_border');
+			jQuery("#error_remark").css("display", "block");
+			jQuery('#error_remark').html('Please enter remark.');
+			error_msg[count] ="remark";
+			count++;
+		}
+		
+		
+		
+		
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery("#load-dealership-img").css("display", "block");
+					jQuery('#dealership-submit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/dealership_code',
+				data	: jQuery('#frmDealership').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#cdealership-submit').removeAttr('disabled');
+						jQuery("#load-dealership-img").css("display", "none");
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#dealership-submit').removeAttr('disabled');
+						jQuery('#error_dealership').html(data_arra[2]);
+						jQuery("#load-dealership-img").css("display", "none");
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#contact-us-submit').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery("#load-dealership-img").css("display", "none");
+							jQuery('#frmDealership')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							jQuery(".truckthanks").show();
+					 }
+					 
+				},
+				complete: function() {
+					jQuery("#load-dealership-img").css("display", "none");
+					jQuery('#dealership-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+
+	// Work with us end
+	
+
+	// Ask an expert start
+	jQuery("#ask-an-expert-submit").click(function(){    
+		var full_name							= jQuery("#full_name").val();
+		var mobile								= jQuery("#mobile").val();
+		var email							= jQuery("#email").val();
+		var country							= jQuery("#country").val();
+		var state							= jQuery("#state").val();
+		var city							= jQuery("#city").val();
+		var remark							= jQuery("#remark").val();
+		
+		
+		var error_msg =[];
+		var count =0 ;		
+		
+		if (full_name == "") {
+			jQuery('#full_name').addClass('error_border');
+			jQuery("#error_full_name").css("display", "block");
+			jQuery('#error_full_name').html('Please enter full name.');
+			error_msg[count] ="full_name";
+			count++;
+		}else if (!regex.test(full_name)) {
+			jQuery('#full_name').addClass('error_border');
+			jQuery("#error_full_name").css("display", "block");
+			jQuery('#error_full_name').html('Please enter valid full name.');
+			error_msg[count] ="full_name";
+			count++;
+		}
+		if (mobile == ""){
+		    jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter mobile number.');
+			error_msg[count] ="mobile";
+			count++;;
+		}else if (isNaN(mobile)){
+			jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter valid mobile number.');
+			error_msg[count] ="mobile";
+			count++;
+		}else if ( mobile.length!=10   ){
+		   	jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter valid 10 digits mobile number.');
+			error_msg[count] ="mobile";
+			count++;
+		}
+		/*if (email == "") {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter email.');
+			error_msg[count] ="email";
+			count++;
+		}else */  if (email != "" && emailRegex.test(email)==false) {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter valid email.');
+			error_msg[count] ="email";
+			count++;
+		}
+		if (state == "") {
+			jQuery('#state').addClass('error_border');
+			jQuery("#error_state").css("display", "block");
+			jQuery('#error_state').html('Please select state.');
+			error_msg[count] ="state";
+			count++;
+		}
+		if (city == "") {
+			jQuery('#city').addClass('error_border');
+			jQuery("#error_city").css("display", "block");
+			jQuery('#error_city').html('Please enter city.');
+			error_msg[count] ="city";
+			count++;
+		}
+		
+		
+		
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#ask-an-expert-submit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/ask_an_expert_code',
+				data	: jQuery('#askanexpertform').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#ask-an-expert-submit').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#ask-an-expert-submit').removeAttr('disabled');
+						jQuery('#error_dealership').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#ask-an-expert-submit').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#askanexpertform')[0].reset();
+							window.location.href=$site_url+'bsvi/thank-you';
+					 }
+					 
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+					jQuery('#ask-an-expert-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+
+	// Work with us end
+
+	// Customer care form start
+	jQuery("#cc-get-in-touch").click(function(){  
+		var customer_name					= jQuery("#customer_name").val();
+		var customer_phone					= jQuery("#customer_phone").val();
+		var customer_email					= jQuery("#customer_email").val();
+		var product							= jQuery("#product").val();
+		//var segment							= jQuery("#segment").val();
+		var e_district						= jQuery("#e_district").val();
+		var e_state							= jQuery("#e_state").val();
+		var e_city							= jQuery("#e_city").val();
+		//var e_dealer						= jQuery("#e_dealer").val();
+		
+		var  mobEq = /^[6-9]\d{9}$/;
+		
+		var error_msg =[];
+		var count =0 ;		
+
+		if ( ( ccGetInTouch.product[0].checked == false ) && ( ccGetInTouch.product[1].checked == false ) && ( ccGetInTouch.product[2].checked == false ) )
+		{
+		jQuery('#product').addClass('error_border');
+			jQuery("#error_product").css("display", "block");
+			jQuery('#error_product').html('Please select product.');
+			error_msg[count] ="product";
+			count++;
+		}
+
+		if (customer_name == "") {
+			jQuery('#customer_name').addClass('error_border');
+			jQuery("#error_customer_name").css("display", "block");
+			jQuery('#error_customer_name').html('Please enter name.');
+			error_msg[count] ="customer_name";
+			count++;
+		}else if (!regex.test(customer_name)) {
+			jQuery('#customer_name').addClass('error_border');
+			jQuery("#error_customer_name").css("display", "block");
+			jQuery('#error_customer_name').html('Please enter valid name.');
+			error_msg[count] ="customer_name";
+			count++;
+		}
+		if (customer_phone == ""){
+		    jQuery('#customer_phone').addClass('error_border');
+			jQuery("#error_customer_phone").css("display", "block");
+			jQuery('#error_customer_phone').html('Please enter phone number.');
+			error_msg[count] ="customer_phone";
+			count++;;
+		}else if (isNaN(customer_phone)){
+			jQuery('#customer_phone').addClass('error_border');
+			jQuery("#error_customer_phone").css("display", "block");
+			jQuery('#error_customer_phone').html('Please enter valid phone number.');
+			error_msg[count] ="customer_phone";
+			count++;
+		}else if ( customer_phone.length!=10   ){
+		   	jQuery('#customer_phone').addClass('error_border');
+			jQuery("#error_customer_phone").css("display", "block");
+			jQuery('#error_customer_phone').html('Please enter valid 10 digits phone number.');
+			error_msg[count] ="customer_phone";
+			count++;
+		}
+		else if (mobEq.test(customer_phone)==false) {
+
+			jQuery('#customer_phone').addClass('error_border');
+			jQuery("#error_customer_phone").css("display", "block");
+			jQuery('#error_customer_phone').html('Please enter valid phone number starting with 6 to 9.');
+			error_msg[count] ="customer_phone";
+			count++;
+	    }
+		
+		if (customer_email == "") {
+			jQuery('#customer_email').addClass('error_border');
+			jQuery("#error_customer_email").css("display", "block");
+			jQuery('#error_customer_email').html('Please enter email.');
+			error_msg[count] ="customer_email";
+			count++;
+		}else if (emailRegex.test(customer_email)==false) {
+			jQuery('#customer_email').addClass('error_border');
+			jQuery("#error_customer_email").css("display", "block");
+			jQuery('#error_customer_email').html('Please enter valid email.');
+			error_msg[count] ="customer_email";
+			count++;
+		}
+		
+		if (product == "") {
+			jQuery('#product').addClass('error_border');
+			jQuery("#error_product").css("display", "block");
+			jQuery('#error_product').html('Please select product.');
+			error_msg[count] ="product";
+			count++;
+		}
+		/*if (segment == "") {
+			jQuery('#segment').addClass('error_border');
+			jQuery("#error_segment").css("display", "block");
+			jQuery('#error_segment').html('Please select segment.');
+			error_msg[count] ="segment";
+			count++;
+		}*/
+		if (e_state == "") {
+			jQuery('#e_state').addClass('error_border');
+			jQuery("#error_e_state").css("display", "block");
+			jQuery('#error_e_state').html('Please select state.');
+			error_msg[count] ="e_state";
+			count++;
+		}
+		if (e_district == "") {
+			jQuery('#e_district').addClass('error_border');
+			jQuery("#error_e_district").css("display", "block");
+			jQuery('#error_e_district').html('Please select district.');
+			error_msg[count] ="e_district";
+			count++;
+		}
+		if (e_city == "") {
+			jQuery('#e_city').addClass('error_border');
+			jQuery("#error_e_city").css("display", "block");
+			jQuery('#error_e_city').html('Please select city.');
+			error_msg[count] ="e_city";
+			count++;
+		}
+		/*if (e_dealer == "") {
+			jQuery('#e_dealer').addClass('error_border');
+			jQuery("#error_e_dealer").css("display", "block");
+			jQuery('#error_e_dealer').html('Please select dealership.');
+			error_msg[count] ="e_dealer";
+			count++;
+		}*/
+		if (($("input[name*='check']:checked").length)<=0) {
+			jQuery('#check').addClass('error_border');
+			jQuery("#error_check").css("display", "block");
+			jQuery('#error_check').html('Please select t&c.');
+			error_msg[count] ="check";
+			count++;
+		}
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#cc-get-in-touch').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/cc_get_in_touch_code',
+				data	: jQuery('#ccGetInTouch').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#cc-get-in-touch').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#contact-us-submit').removeAttr('disabled');
+						jQuery('#error_work-with-us').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#cc-get-in-touch').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#ccGetInTouch')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							jQuery(".contactthanks").show();
+					 }
+					 
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+					jQuery('#cc-get-in-touch').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+	
+	// Customer care form start
+
+	// Campaign form started
+	jQuery("#campaign-submit").click(function(){  
+		var name					= jQuery("#name").val();
+		var mobile					= jQuery("#mobile").val();
+		var email					= jQuery("#email").val();
+		var e_district						= jQuery("#e_district").val();
+		var e_state							= jQuery("#e_state").val();
+		var e_city							= jQuery("#e_city").val();
+		
+		var  mobEq = /^[6-9]\d{9}$/;
+		
+		var error_msg =[];
+		var count =0 ;		
+
+
+		if (name == "") {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter name.');
+			error_msg[count] ="name";
+			count++;
+		}else if (!regex.test(name)) {
+			jQuery('#name').addClass('error_border');
+			jQuery("#error_name").css("display", "block");
+			jQuery('#error_name').html('Please enter valid name.');
+			error_msg[count] ="name";
+			count++;
+		}
+		if (email == "") {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter email.');
+			error_msg[count] ="email";
+			count++;
+		}else if (emailRegex.test(email)==false) {
+			jQuery('#email').addClass('error_border');
+			jQuery("#error_email").css("display", "block");
+			jQuery('#error_email').html('Please enter valid email.');
+			error_msg[count] ="email";
+			count++;
+		}
+		
+		if (mobile == ""){
+		    jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter mobile number.');
+			error_msg[count] ="mobile";
+			count++;;
+		}else if (isNaN(mobile)){
+			jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter valid mobile number.');
+			error_msg[count] ="mobile";
+			count++;
+		}else if ( mobile.length!=10   ){
+		   	jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter valid 10 digits mobile number.');
+			error_msg[count] ="mobile";
+			count++;
+		}
+		else if (mobEq.test(mobile)==false) {
+
+			jQuery('#mobile').addClass('error_border');
+			jQuery("#error_mobile").css("display", "block");
+			jQuery('#error_mobile').html('Please enter valid mobile number starting with 6 to 9.');
+			error_msg[count] ="mobile";
+			count++;
+	    }
+		
+		if (e_state == "") {
+			jQuery('#e_state').addClass('error_border');
+			jQuery("#error_e_state").css("display", "block");
+			jQuery('#error_e_state').html('Please select state.');
+			error_msg[count] ="e_state";
+			count++;
+		}
+		if (e_district == "") {
+			jQuery('#e_district').addClass('error_border');
+			jQuery("#error_e_district").css("display", "block");
+			jQuery('#error_e_district').html('Please select district.');
+			error_msg[count] ="e_district";
+			count++;
+		}
+		if (e_city == "") {
+			jQuery('#e_city').addClass('error_border');
+			jQuery("#error_e_city").css("display", "block");
+			jQuery('#error_e_city').html('Please select city.');
+			error_msg[count] ="e_city";
+			count++;
+		}
+		
+		if(count>0){
+			jQuery('#'+error_msg[0]).focus();
+			return false;
+		}else{
+			jQuery.ajax({
+				beforeSend: function () {
+					jQuery(".loaderform").show();
+					jQuery('#campaign-submit').attr('disabled','disabled');
+				},
+				type	: "POST",
+				url		: $site_url+'front_form/campaign_code',
+				data	: jQuery('#campaignForm').serialize(),
+				success    : function(data){
+					 data_arra = data.split('@@'); 
+						
+					 if(data_arra[0].trim()=='error') {  
+						jQuery("#error_"+data_arra[1]).css("display", "block");
+						jQuery('#error_'+data_arra[1]).html(data_arra[2]);
+						jQuery('#'+data_arra[1]).focus();
+						jQuery('#campaign-submit').removeAttr('disabled');
+						jQuery(".loaderform").hide();
+					 } else if(data_arra[0].trim()=='error_common') {
+						jQuery('#campaign-submit').removeAttr('disabled');
+						jQuery('#error_work-with-us').html(data_arra[2]);
+						jQuery(".loaderform").hide();
+					 }else  if(data_arra[0].trim()=='success'){
+							jQuery('#cc-get-in-touch').removeAttr('disabled');
+							//jQuery('#success_work-with-us').html(data_arra[1]);
+							jQuery(".loaderform").hide();
+							jQuery('#campaignForm')[0].reset();
+							//window.location.href=$site_url+'thank-you';
+							jQuery(".contactBrochure").show();
+					 }
+					 
+				},
+				complete: function() {
+					jQuery(".loaderform").hide();
+					jQuery('#campaign-submit').removeAttr('disabled');
+				},
+
+			});
+			return false;
+		}
+	});
+	
+	// Campaign form ends
+
+
+});
+// ------------------ Newsletter End--------------------------

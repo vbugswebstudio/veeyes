@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://www.eichertrucksandbuses.com/360/6028T/interior/6028T.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple example</title>
+    <link rel="stylesheet" href="./pannellum.css">
+    <script src="./jquery.min.js.download"></script>
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./pannellum.js.download"></script>
+   
+</head>
+<body>
+
+<div id="panorama" class="pnlm-container" tabindex="0">
+    
+    <div class="popup"></div>
+
+<div class="pnlm-ui pnlm-grab"><div class="pnlm-dragfix"></div><span class="pnlm-about-msg1"></span><div class="pnlm-sprite pnlm-hot-spot-debug-indicator" style="display: none;"></div><div class="pnlm-panorama-info" style="display: none;"><div class="pnlm-title-box"></div><div class="pnlm-author-box"></div></div><div class="pnlm-load-box" style="display: none;"><p>Loading...</p><div class="pnlm-lbox"><div class="pnlm-loading"></div></div><div class="pnlm-lbar"><div class="pnlm-lbar-fill" style="width: 100%;"></div></div><p class="pnlm-lmsg"></p></div><div class="pnlm-error-msg pnlm-info-box"></div><div class="pnlm-controls-container"><div class="pnlm-zoom-controls pnlm-controls" style="display: block;"><div class="pnlm-zoom-in pnlm-sprite pnlm-control"></div><div class="pnlm-zoom-out pnlm-sprite pnlm-control"></div></div><div class="pnlm-fullscreen-toggle-button pnlm-sprite pnlm-fullscreen-toggle-button-inactive pnlm-controls pnlm-control" style="display: block;"></div></div><div class="pnlm-load-button" style="display: none;"><p>Click to<br>Load<br>Panorama</p></div><div class="pnlm-compass pnlm-controls pnlm-control" style="display: none;"></div></div><div class="pnlm-render-container"><canvas width="0" height="0" style="height: 100%; width: 100%;"></canvas><div class="pnlm-hotspot-base pnlm-hotspot pnlm-sprite pnlm-info pnlm-tooltip" style="visibility: visible; transform: translate(0px, 0px) translateZ(9999px) rotate(0deg);"><span style="max-width: initial; margin-left: 0px; margin-top: -12px;"><div><img src="./Regeneration-Switch(1).png" style="padding-top: 5px;"></div></span></div><div class="pnlm-hotspot-base pnlm-hotspot pnlm-sprite pnlm-info pnlm-tooltip" style="visibility: visible; transform: translate(0px, 0px) translateZ(9999px) rotate(0deg);"><span style="max-width: initial; margin-left: 0px; margin-top: -12px;"><div><img src="./HVAC-Controls(1).png" style="padding-top: 5px;"></div></span></div><div class="pnlm-hotspot-base pnlm-hotspot pnlm-sprite pnlm-info pnlm-tooltip" style="visibility: visible; transform: translate(0px, 0px) translateZ(9999px) rotate(0deg);"><span style="max-width: initial; margin-left: 0px; margin-top: -12px;"><div><img src="./Differential-Lock.png" style="padding-top: 5px;"></div></span></div><div class="pnlm-hotspot-base pnlm-hotspot pnlm-sprite pnlm-info pnlm-tooltip" style="visibility: visible; transform: translate(0px, 0px) translateZ(9999px) rotate(0deg);"><span style="max-width: initial; margin-left: 0px; margin-top: -12px;"><div><img src="./Cruise-Control(1).png" style="padding-top: 5px;"></div></span></div><div class="pnlm-hotspot-base pnlm-hotspot pnlm-sprite pnlm-info pnlm-tooltip" style="visibility: visible; transform: translate(0px, 0px) translateZ(9999px) rotate(0deg);"><span style="max-width: initial; margin-left: 0px; margin-top: -12px;"><div><img src="./Battery-Cut-Off.png" style="padding-top: 5px;"></div></span></div><div class="pnlm-hotspot-base pnlm-hotspot pnlm-sprite pnlm-info pnlm-tooltip" style="visibility: visible; transform: translate(0px, 0px) translateZ(9999px) rotate(0deg);"><span style="max-width: initial; margin-left: 0px; margin-top: -12px;"><div><img src="./MBooster+(1).png" style="padding-top: 5px;"></div></span></div><div class="pnlm-hotspot-base pnlm-hotspot pnlm-sprite pnlm-info pnlm-tooltip" style="visibility: hidden;"><span style="max-width: initial; margin-left: 0px; margin-top: -12px;"><div><img src="./Rest-Kit(1).png" style="padding-top: 5px;"></div></span></div></div></div>
+
+
+
+
+
+
+<script>
+
+
+
+var viewer = pannellum.viewer('panorama', {
+    "type": "equirectangular",
+     "sceneFadeDuration": 1000,
+     //"mouseZoom":false,
+     "autoLoad": true,
+    "panorama": "6028T.jpg",
+
+ "hotSpots": [
+                {
+                    "pitch": 200,
+                    "yaw": 574,
+                    "type": "info",
+                    "image": "hotspot/Regeneration-Switch.png",
+                },
+
+                {
+                    "pitch": 193,
+                    "yaw": 573,
+                    "type": "info",
+                    "image": "hotspot/HVAC-Controls.png",
+                },
+
+                 {
+                    "pitch": 195,
+                    "yaw": 576,
+                    "type": "info",
+                    "image": "hotspot/Differential-Lock.png",
+                },
+
+                {
+                    "pitch": 186,
+                    "yaw": 605,
+                    "type": "info",
+                    "image": "hotspot/Cruise-Control.png",
+                },
+
+                {
+                    "pitch": 183,
+                    "yaw": 601,
+                    "type": "info",
+                    "image": "hotspot/Battery-Cut-Off.png",
+                },
+
+                {
+                    "pitch": 184,
+                    "yaw": 603,
+                    "type": "info",
+                    "image": "hotspot/MBooster+.png",
+                },
+
+                {
+                    "pitch": 335,
+                    "yaw": 500,
+                    "type": "info",
+                    "image": "hotspot/Rest-Kit.png",
+                },
+
+
+  ] 
+     
+
+});
+
+
+viewer.on('load', function(){
+
+
+$(document).ready(function(){
+ 
+
+$(".pnlm-hotspot-base").click(function(){
+   
+  $('.popup').addClass("showdata");
+
+  var data = $(this).html();
+  $('.popup').html(data); 
+});
+
+$(".popup").click(function(){
+  
+  $(this).removeClass('showdata'); 
+  
+});
+
+
+});
+
+
+
+
+ });   
+
+
+
+</script>
+
+
+
+
+
+
+
+</body></html>

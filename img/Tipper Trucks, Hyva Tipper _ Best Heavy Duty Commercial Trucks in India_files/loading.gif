@@ -1,0 +1,1522 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+   <base href="/">
+   <meta charset="UTF-8">
+
+   <title>Trucks, Buses - Haulage Trucks, Tipper Trucks, School Bus Staff Bus - Eicher</title>
+   <meta name="fragment" content="!" />
+   <link rel="shortcut icon" href="https://www.eichertrucksandbuses.com/front/images/eicher-fav.png">
+   <meta name="keywords" content="trucks, buses, heavy duty trucks, medium duty trucks, light duty trucks, trucks in india, buses in india, Haulage trucks, tipper trucks, staff bus, school bus" />
+   <meta name="description" content="Trucks & buses by Eicher have different variants such as haulage trucks, tipper trucks, school bus, staff bus etc. Eicher Trucks & Buses is the leading brand in commercial vehicle segment in India." />
+   <meta property="og:title" content="Trucks, Buses - Haulage Trucks, Tipper Trucks, School Bus Staff Bus - Eicher" />
+   <meta property="og:description" content="Trucks & buses by Eicher have different variants such as haulage trucks, tipper trucks, school bus, staff bus etc. Eicher Trucks & Buses is the leading brand in commercial vehicle segment in India." />
+   <!-- twitter meta -->
+   <meta name="twitter:title" content="Trucks, Buses - Haulage Trucks, Tipper Trucks, School Bus Staff Bus - Eicher" />
+   <meta name="twitter:description" content="Trucks & buses by Eicher have different variants such as haulage trucks, tipper trucks, school bus, staff bus etc. Eicher Trucks & Buses is the leading brand in commercial vehicle segment in India." />
+   <meta property="og:type" content="Article" />
+      <meta property="og:url" content="https://www.eichertrucksandbuses.com/front/images/loading.gif" />
+   <link rel="canonical" href="https://www.eichertrucksandbuses.com/front/images/loading.gif" />
+   <meta name="author" content="Eicher Trucks & Buses" />
+  
+
+<meta name="twitter:image:src" content="https://www.eichertrucksandbuses.com/front/images/logo.png" />
+   <meta property="og:image" content="https://www.eichertrucksandbuses.com/front/images/logo.png" />
+
+ <meta name="google-site-verification" content="GGsEkzliuIhug72qwzUBsOmYLKyzTHLhE-1W-0ylpjU" />
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123355657-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123355657-1');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-568TCG7');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+ <link rel="stylesheet" href="https://www.eichertrucksandbuses.com/front/css/app.css">
+  <link rel="stylesheet" href="https://www.eichertrucksandbuses.com/front/css/style-v2.css">
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <script>
+      $site_url = "https://www.eichertrucksandbuses.com/";
+   </script>
+   <script src="https://www.eichertrucksandbuses.com/front/js/script.js"></script>
+   
+   <script src="https://www.eichertrucksandbuses.com/front/js/common.js"></script>
+   <script src="https://www.eichertrucksandbuses.com/front/js/custom.js"></script>
+   <script src='https://www.google.com/recaptcha/api.js'></script>
+<script type="application/ld+json"> 
+[ 
+{ 
+"@context": "http://www.schema.org", 
+"@type": "WebPage", 
+"name": "Trucks, Buses - Haulage Trucks, Tipper Trucks, School Bus Staff Bus - Eicher", 
+"url": "https://www.eichertrucksandbuses.com/front/images/loading.gif", 
+"description": "Trucks & buses by Eicher have different variants such as haulage trucks, tipper trucks, school bus, staff bus etc. Eicher Trucks & Buses is the leading brand in commercial vehicle segment in India.",
+   "publisher": {
+   "@type": "Organization",
+   "name": "Eicher Trucks and Buses"
+   }
+}]
+</script>
+
+ <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+
+<script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <!--<script type="text/javascript">var apikey = '8QVeVc3S2EXQXU3IRDNSm6Q_PFpVhy_Lq3Lhb2_SbFg';</script>-->
+    <script type="text/javascript">var apikey = 'DW3-YCFFZtJzlAQpTfVPoXADcZpEeZe3t8h6ganVsqo';</script>
+
+    <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '929224937542936');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=929224937542936&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+</head>
+<body>
+<div id="page">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-568TCG7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="loader"></div> 
+
+<header>
+      <div class="container">
+         <div class="row">
+            <div class="col-20 fl logo">
+                                   <a href="https://www.eichertrucksandbuses.com/">
+                     <img src="https://www.eichertrucksandbuses.com/front/images/logo.png" alt="">
+                  </a>
+
+                           </div>
+            <div class="top-link col-50 fr">
+               <div class="fr">
+                  <div class="line-top skew fl"><a class="skew-rotate" href="javascript:void(0)">TRUCKS AND BUSES</a></div>
+                  <div class="search fl">
+                     <form method="get" id="frm-top-search" name="frm-top-search" action="https://www.eichertrucksandbuses.com/search" onsubmit='return submitSearchForm();'>
+                     <input class="change fl" type="text"  placeholder="Search" maxlength="200" name="site_search" id="site_search" onkeyup="return Remove('site_search');">
+                     
+                     <input class="fl" type="submit" value="go"></form>
+                  </div>
+                  <div class="top-con fl"><a href="https://www.eichertrucksandbuses.com/contact">Contact</a></div>
+                     
+                   <div class="top-con fl"><a href="https://www.eichertrucksandbuses.com/careers">Careers</a></div>
+
+                   <div class="top-con fl"><a href="https://www.eichertrucksandbuses.com/blog">Blog</a></div>  
+
+               </div>
+            </div>
+         </div>
+      </div>
+      <span class="skew-top-left skew">skew</span> <span class="skew-top-right skew">skew</span>
+      <div class="menu-icon"><a href="#menu"><img src="https://www.eichertrucksandbuses.com/front/images/menu-icon.png" alt=""></a></div>
+   </header>
+   <div class="tgmenu" id="menu">
+      <ul>
+         <li>
+            <a>
+               <div class="search">
+               <form method="get" id="frm-mobile-search" name="frm-mobile-search" action="https://www.eichertrucksandbuses.com/search" onsubmit='return submitSearchMobileForm();'>
+					<input class="change fl" type="text" placeholder="Search" maxlength="200" name="site_search" id="site_search_mobile" onkeyup="return Remove('site_search_mobile');" > 
+					<input class="fl" type="submit" value="go"></form>
+               </div>
+            </a>
+         </li>
+         <li><a href="https://www.eichertrucksandbuses.com/">HOME</a></li>
+         <li>
+            <span>OUR STORY</span>
+            <ul>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/our-story/vecv-joint-venture">VECV Joint Venture</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/our-story/brand-story">Brand Story</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/our-story/world-class-manufacturing">World Class Manufacturing</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/our-story/network">Network</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/milestones">Milestones</a>
+               </li>
+               
+            </ul>
+         </li>
+         <li>
+            <span>TRUCKS</span>
+            <ul>
+                           <li >
+                  <span>Heavy Duty Trucks</span>
+                  <ul>
+                                     <li>
+                                                <a href="https://www.eichertrucksandbuses.com/heavy-duty-trucks/haulage">Haulage&nbsp;&nbsp; </a>
+                     
+                     </li>
+                                    <li>
+                                                <a href="https://www.eichertrucksandbuses.com/heavy-duty-trucks/tipper">Tipper&nbsp;&nbsp; </a>
+                     
+                     </li>
+                                    <li>
+                                                <a href="https://www.eichertrucksandbuses.com/heavy-duty-trucks/tractor-trailer">Tractor Trailer&nbsp;&nbsp; </a>
+                     
+                     </li>
+                                 </ul>
+               </li>
+                           <li >
+                  <span>Light & Medium Duty trucks</span>
+                  <ul>
+                                     <li>
+                                                <a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/sub-5-ton">Sub 5 Ton&nbsp;&nbsp; </a>
+                     
+                     </li>
+                                    <li>
+                                                <a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/light-duty">Light Duty&nbsp;&nbsp; </a>
+                     
+                     </li>
+                                    <li>
+                                                <a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/medium-duty">Medium Duty&nbsp;&nbsp; </a>
+                     
+                     </li>
+                                    <li>
+                                                <a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/tipper">Tipper&nbsp;&nbsp; </a>
+                     
+                     </li>
+                                 </ul>
+               </li>
+                           
+            </ul>
+         </li>
+         <li>
+            <span>BUSES</span>
+            <ul>
+                           <li >
+                  <span>School Bus</span>
+                  <ul>
+                                     <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/school-bus/skyline-pro">Skyline Pro&nbsp;&nbsp; </a></li>
+                     
+                                    <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/school-bus/skyline">Skyline&nbsp;&nbsp; </a></li>
+                     
+                                    <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/school-bus/starline">Starline&nbsp;&nbsp; </a></li>
+                     
+                                 </ul>
+               </li>
+                           <li >
+                  <span>Staff Bus</span>
+                  <ul>
+                                     <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/staff-bus/skyline-pro">Skyline Pro&nbsp;&nbsp; </a></li>
+                     
+                                    <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/staff-bus/skyline">Skyline&nbsp;&nbsp; </a></li>
+                     
+                                    <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/staff-bus/starline">Starline&nbsp;&nbsp; </a></li>
+                     
+                                 </ul>
+               </li>
+                           <li >
+                  <span>Route permit</span>
+                  <ul>
+                                     <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/route-permit/skyline-pro">Skyline Pro&nbsp;&nbsp; </a></li>
+                     
+                                    <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/route-permit/skyline">Skyline&nbsp;&nbsp; </a></li>
+                     
+                                    <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/route-permit/starline">Starline&nbsp;&nbsp; </a></li>
+                     
+                                 </ul>
+               </li>
+                           <li >
+                  <span>Bus Chassis</span>
+                  <ul>
+                                     <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/bus-chassis/hd-bus-chassis">HD Bus Chassis&nbsp;&nbsp; </a></li>
+                     
+                                    <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/bus-chassis/2000-series-chassis">2000 Series Chassis&nbsp;&nbsp; </a></li>
+                     
+                                    <li>
+                                                 <a href="https://www.eichertrucksandbuses.com/buses/bus-chassis/pro-3000-series-chassis">Pro 3000 Series Chassis &nbsp;&nbsp; </a></li>
+                     
+                                 </ul>
+               </li>
+                          
+         <!--<li>
+            <span>SPECIAL APPLICATIONS</span>
+            <ul>
+                           <li >
+                  <span>Liquid Transport</span>
+                  <ul>
+                                  </ul>
+               </li>
+                           <li >
+                  <span>Cement</span>
+                  <ul>
+                                  </ul>
+               </li>
+                           <li >
+                  <span>Cargo</span>
+                  <ul>
+                                  </ul>
+               </li>
+                           <li >
+                  <span>Refrigeration</span>
+                  <ul>
+                                  </ul>
+               </li>
+                           <li >
+                  <span>City Civic</span>
+                  <ul>
+                                  </ul>
+               </li>
+                           <li >
+                  <span>Police/Defence</span>
+                  <ul>
+                                  </ul>
+               </li>
+                           
+            </ul>
+         </li>-->
+         <li>
+            <span>LIFETIME SUPPORT SOLUTIONS</span>
+            <ul>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-financial-services">Financial Services</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-service-network">Eicher Secure</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-freedom">Eicher Freedom</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-live">Eicher Live</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-pro-pilot">Eicher Pro Pilot</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-service-network">Service Network</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-container-setup">Container Setup</a>
+               </li>
+              <!--  <li >
+                 <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-on-road-service">On Road Service</a>
+              </li> -->
+               <!-- <li >
+                  <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-dial-a-part">Dial A Part</a>
+               </li> -->
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-renew">Eicher Renew</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/used-trucks/eicher-sure-advantage">Eicher Sure</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-promise">Eicher Promise</a>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <span>USED TRUCKS</span>
+            <ul>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/used-trucks/eicher-sure-advantage">Eicher Sure <span>Advantage</span></a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/used-trucks/listing">Buy <span>Used Trucks</span></a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/used-trucks/exchange">Exchange <span>Used Trucks</span></a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/used-trucks/finance">Finance <span>Used Trucks</span></a>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <span>INTERNATIONAL BUSINESS</span>
+            <ul>
+                               <li>
+                  <span>SOUTH ASIA</span>
+                  <ul>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/sri-lanka/products">Sri Lanka</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/bangladesh/products">Bangladesh</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/nepal/products">Nepal</a>
+                                                                 </li>
+                     
+                  </ul>
+               </li>
+                           <li>
+                  <span>AFRICA</span>
+                  <ul>
+                                             <li>
+                                                                        <a href="https://www.eichertrucksandbuses.co.za" target="_blank">South Africa</a>
+                                                                  </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/kenya/products">Kenya</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/tanzania/products">Tanzania</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/ivory-coast/products"> Ivory Coast</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/zambia/products">Zambia</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/mozambique/products">Mozambique</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/nigeria/products">Nigeria</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/egypt/products">Egypt</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/ghana/products">Ghana</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/zimbabwe/products">Zimbabwe</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/ethiopia/products">Ethiopia</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/uganda/products">Uganda</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/democratic-republic-of-congo/products">Democratic Republic of Congo</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/mauritius/products">Mauritius</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/malawi/products">Malawi</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/benin/products">Benin</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/cameroon/products">Cameroon</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/madagascar/products">Madagascar</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/sierra-leone/products">Sierra Leone</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/burkina-faso/products">Burkina Faso</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/liberia/products">Liberia</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/gabon/products">Gabon</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/somalia/products">Somalia</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/sudan/products">Sudan</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/guinea/products">Guinea</a>
+                                                                 </li>
+                     
+                  </ul>
+               </li>
+                           <li>
+                  <span>MIDDLE EAST</span>
+                  <ul>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/kuwait/products">Kuwait</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/united-arab-emirates/products">United Arab Emirates</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/kingdom-of-saudi-arabia/products">Kingdom of Saudi Arabia</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/qatar/products">Qatar</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/bahrain/products">Bahrain</a>
+                                                                 </li>
+                                             <li>
+                                                                           <a href="https://www.eichertrucksandbuses.com/international-business/oman/products">Oman</a>
+                                                                 </li>
+                     
+                  </ul>
+               </li>
+                        </ul>
+         </li>
+         <li>
+            <span>NEWS ROOM</span>
+            <ul>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/media/press-material">Press Material</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/media/social-initiatives">Social Initiatives</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/media/awards-and-recognitions">Awards & Recognitions</a>
+               </li>
+               <li >
+                  <a href="https://www.eichertrucksandbuses.com/media/events">Events</a>
+               </li>
+            </ul>
+         </li>
+         <li >
+            <a href="https://www.eichertrucksandbuses.com/blog">BLOG</a>
+         </li>
+         <li >
+            <a href="https://www.eichertrucksandbuses.com/contact">CONTACT</a>
+         </li>
+         <li >
+            <a href="https://www.eichertrucksandbuses.com/careers">CAREERS</a>
+         </li>
+         <li >
+            <a href="https://www.eichertrucksandbuses.com/privacy-policy">PRIVACY POLICY</a>
+         </li>
+         <li >
+            <a href="https://www.eichertrucksandbuses.com/legal-disclaimer">LEGAL DISCLAIMER</a>
+         </li>
+         <li >
+            <a href="https://www.eichertrucksandbuses.com/sitemap">SITE MAP</a>
+         </li>
+      </ul>
+   </div>
+   <nav>
+      <div class="container">
+         <div class="row">
+            <div class="col">
+               <ul>
+                  <li>
+                     <a  href="javascript:void(0)">OUR STORY</a>
+                     <div class="main-menu">
+                        <div class="container">
+                           <div class="row">
+                              <div class="menu-left col-30 fl">
+                                 <p>The Volvo Group and Eicher Motors came together with one common vision to form the VE Commercial Vehicles in 2008.</p>
+                                 <p>Eicher Trucks and Buses, the leading brand of this joint-venture, is driving the Future of Indian Trucking with the next-gen vehicles and innovative support solutions.</p>
+                                 <div class="menu-img"><a href="https://www.youtube.com/watch?v=DRUNRrejP4w" style="display:inline-block; text-align:center; width:100%" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/menu-icon-our-story.png" alt="" style="display:inline-block;"></a></div>
+                              </div>
+                              <div class="menu-right our-menu col-70 fl">
+                                 <div class="business-menu fl">
+                                    <div class="business-menu-item big fl">
+                                       <ul>
+                                          <li >
+                                             <a href="https://www.eichertrucksandbuses.com/our-story/vecv-joint-venture">VECV Joint Venture</a>
+                                          </li>
+                                          <li >
+                                             <a href="https://www.eichertrucksandbuses.com/our-story/brand-story">Brand Story</a>
+                                          </li>
+                                          <li >
+                                             <a href="https://www.eichertrucksandbuses.com/our-story/world-class-manufacturing">World Class Manufacturing</a>
+                                          </li>
+                                          <li >
+                                             <a href="https://www.eichertrucksandbuses.com/our-story/network">Network</a>
+                                          </li>
+                                          
+                                          <li >
+                                             <a href="https://www.eichertrucksandbuses.com/our-story/milestones">Milestones</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="business-menu-right fr"><img src="https://www.eichertrucksandbuses.com/front/images/our-story.jpg" alt="">
+                                       <p class="font-16">Visit our corporate website at :
+                                       <a class="vecv" target="_blank" href="http://www.vecv.in/">www.vecv.in </a> </p>
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <a   href="javascript:void(0)">TRUCKS</a>
+                     <div class="main-menu">
+                        <div class="container">
+                           <div class="row">
+                              <div class="menu-left col-30 fl">
+                                 <p>The all new BSVI range of Pro Series trucks is the range of multi-application, next-gen heavy duty and light & medium duty trucks (4.9 to 55 Tons – Haulage. Tippers. Tractor-Trailers), powered by Eicher’s unique EUTECH6 solution and designed to deliver superior performance & Maximum Lifetime Profitability. </p>
+                                 
+                                 <div class="menu-icons-circle"><a href="https://www.youtube.com/watch?v=zecBiPHpQn0" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/menu-icon-eicher-live.png" alt=""></a><a href="https://www.youtube.com/watch?v=tAVFVEZ2P0U" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/menu-icon-max.png" alt=""></a><a href="https://www.youtube.com/watch?v=NuvsPu6NnVY" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/menu-icon-best.png" alt=""></a></div>
+                              </div>
+                              <div class="menu-right col-70 fl">
+                                 <ul class="tabs-menu new-menu-tab">
+                                                                     <li  class="ng-scope  current"><a href="javascript:void(0)" id="heavy-duty-trucks" class="skew">Heavy Duty Trucks</a></li>
+                                                               <li  class="ng-scope  "><a href="javascript:void(0)" id="light-medium-duty-trucks" class="skew">Light & Medium Duty trucks</a></li>
+                                                               </ul>
+                                 <div class="tab">
+                                                                       <div class="tab-content heavy-duty-trucks  active">
+                                       <ul>
+                                                                         <li class="ng-scope">
+                                                                                          <a href="https://www.eichertrucksandbuses.com/heavy-duty-trucks/haulage">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/f998ad098183bb62126950c1aa5b9058.png" alt="">
+                                                <h6 class="ng-binding">Haulage</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li class="ng-scope">
+                                                                                          <a href="https://www.eichertrucksandbuses.com/heavy-duty-trucks/tipper">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/f10f15fe9038823e9f2085c3c75ec56a.png" alt="">
+                                                <h6 class="ng-binding">Tipper</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li class="ng-scope">
+                                                                                          <a href="https://www.eichertrucksandbuses.com/heavy-duty-trucks/tractor-trailer">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/1dd08e13e6f20b1c45f6b794e6d4ede8.png" alt="">
+                                                <h6 class="ng-binding">Tractor Trailer</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        
+                                       </ul>
+                                    </div>
+                                                               <div class="tab-content light-medium-duty-trucks  ">
+                                       <ul>
+                                                                         <li class="ng-scope">
+                                                                                          <a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/sub-5-ton">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/6949f436de981b223b6dece87b1918c9.png" alt="">
+                                                <h6 class="ng-binding">Sub 5 Ton</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li class="ng-scope">
+                                                                                          <a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/light-duty">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/8bc4df6528cbfcf4055acfbcbd79a5c0.png" alt="">
+                                                <h6 class="ng-binding">Light Duty</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li class="ng-scope">
+                                                                                          <a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/medium-duty">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/2346215cf36368c291b18acb65592f2f.png" alt="">
+                                                <h6 class="ng-binding">Medium Duty</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li class="ng-scope">
+                                                                                          <a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/tipper">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/2494a0cf96399768bc1e5fbd9c1b1e45.png" alt="">
+                                                <h6 class="ng-binding">Tipper</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        
+                                       </ul>
+                                    </div>
+                                                            </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <a  href="javascript:void(0)" >BUSES</a>
+                     <div class="main-menu">
+                        <div class="container">
+                           <div class="row">
+                              <div class="menu-left col-30 fl">
+                                 <p>Eicher offers a wide range of 12-62 seater buses on Skyline Pro, Skyline and Starline platforms, which specifically cater to the school, staff, tourist & Route Permit segments. Built with futuristic engine technology and contemporary design, these buses are manufactured in a state-of-the-art bus building plant at Baggad to deliver a safe ride and best-in-class performance. </p>
+                                 
+                                 <div class="menu-icons-circle"><a href="https://www.youtube.com/watch?v=-9tfKvlfkIw" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/menu-icon-safety.png" alt=""></a><a href="https://www.youtube.com/watch?v=UIHiHFgvotI" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/hd-bus-chassis-and-buses.png" alt=""></a><a href="https://www.youtube.com/watch?v=hSzhkSKSsJw" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/pro-8000--fuel-efficiency.png" alt=""></a></div>
+                              </div>
+                              <div class="menu-right col-70 fl">
+                                 <ul class="tabs-menu new-menu-tab">
+                                                                     <li  class="current"><a href="javascript:void(0)" id="school-bus" class="skew">School Bus</a></li>
+                                                               <li  class=""><a href="javascript:void(0)" id="staff-bus" class="skew">Staff Bus</a></li>
+                                                               <li  class=""><a href="javascript:void(0)" id="route-permit" class="skew">Route permit</a></li>
+                                                               <li  class=""><a href="javascript:void(0)" id="bus-chassis" class="skew">Bus Chassis</a></li>
+                                                               </ul>
+                                 <div class="tab">
+                                                                       <div class="tab-content school-bus  active">
+                                       <ul>
+                                                                         <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/school-bus/skyline-pro">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/9084b7dfdcbff37e844b059857e8d1dd.png" alt="">
+                                                <h6 class="ng-binding">Skyline Pro</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/school-bus/skyline">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/b1f8af3a351d966a3127f13960736979.png" alt="">
+                                                <h6 class="ng-binding">Skyline</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/school-bus/starline">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/5dcf6968ba8a11626ac6eb666f3e9ba1.png" alt="">
+                                                <h6 class="ng-binding">Starline</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        
+                                       </ul>
+                                    </div>
+                                                               <div class="tab-content staff-bus  ">
+                                       <ul>
+                                                                         <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/staff-bus/skyline-pro">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/f9e7b124f7c5b29d216d313332ffcc14.png" alt="">
+                                                <h6 class="ng-binding">Skyline Pro</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/staff-bus/skyline">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/604fce5ef2c8b636b565aa15ea507be2.png" alt="">
+                                                <h6 class="ng-binding">Skyline</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/staff-bus/starline">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/06d816e8475a3aaf4e1206a8f85f62cc.png" alt="">
+                                                <h6 class="ng-binding">Starline</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        
+                                       </ul>
+                                    </div>
+                                                               <div class="tab-content route-permit  ">
+                                       <ul>
+                                                                         <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/route-permit/skyline-pro">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/8d79466f7cc5ffbefa8b4384a33e893d.png" alt="">
+                                                <h6 class="ng-binding">Skyline Pro</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/route-permit/skyline">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/7f39927afe2fcff257a56fbf7568420a.png" alt="">
+                                                <h6 class="ng-binding">Skyline</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/route-permit/starline">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/ca47fc40654cef2fa798d7900f82c4c2.png" alt="">
+                                                <h6 class="ng-binding">Starline</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        
+                                       </ul>
+                                    </div>
+                                                               <div class="tab-content bus-chassis  ">
+                                       <ul>
+                                                                         <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/bus-chassis/hd-bus-chassis">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/03430e6422fdd653ee02c5fab93ed63e.png" alt="">
+                                                <h6 class="ng-binding">HD Bus Chassis</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/bus-chassis/2000-series-chassis">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/f85c3a7f311a973b6bca66ad2cc48c32.png" alt="">
+                                                <h6 class="ng-binding">2000 Series Chassis</h6>
+                                             </a>
+                                                                                    </li>
+                                                                        <li>
+                                                                                          <a href="https://www.eichertrucksandbuses.com/buses/bus-chassis/pro-3000-series-chassis">
+                                                <img src="https://cms.grapesmobile.com/uploads/truck/sub-category/39ce3fe888dbac8c5e127ac7e86255a2.png" alt="">
+                                                <h6 class="ng-binding">Pro 3000 Series Chassis </h6>
+                                             </a>
+                                                                                    </li>
+                                                                        
+                                       </ul>
+                                    </div>
+                                                            </div>
+                                 <div class="clr"></div>
+                                 <!--<div class="all-models">All models available in chassis too</div>-->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <!--<li>
+                     <a  href="javascript:void(0)" >SPECIAL APPLICATIONS</a>
+                     <div class="main-menu">
+                        <div class="container">
+                           <div class="row">
+                              <div class="menu-left col-30 fl">
+                                 <p>The dynamic growth of Indian economy is driving the expansion of commercial vehicles into new segments and applications. To cater to this need, Eicher offers fully-built customized solutions for specific applications, which deliver much higher quality standards and productivity levels. </p>
+                              </div>
+                              <div class="menu-right col-70 fl">
+                                 <ul class="tabs-menu new-menu-tab">
+                                                                     <li  class="ng-scope  current"><a href="javascript:void(0)" id="liquid-transport" class="skew">Liquid Transport</a></li>
+                                                               <li  class="ng-scope  "><a href="javascript:void(0)" id="cement" class="skew">Cement</a></li>
+                                                               <li  class="ng-scope  "><a href="javascript:void(0)" id="cargo" class="skew">Cargo</a></li>
+                                                               <li  class="ng-scope  "><a href="javascript:void(0)" id="refrigeration" class="skew">Refrigeration</a></li>
+                                                               <li  class="ng-scope  "><a href="javascript:void(0)" id="city-civic" class="skew">City Civic</a></li>
+                                                               <li  class="ng-scope  "><a href="javascript:void(0)" id="police-defence" class="skew">Police/Defence</a></li>
+                                                               </ul>
+                                 <div class="tab">
+                                                                       <div class="tab-content liquid-transport  active">
+                                       <ul>
+                                                                         
+                                       </ul>
+                                    </div>
+                                                               <div class="tab-content cement  ">
+                                       <ul>
+                                                                         
+                                       </ul>
+                                    </div>
+                                                               <div class="tab-content cargo  ">
+                                       <ul>
+                                                                         
+                                       </ul>
+                                    </div>
+                                                               <div class="tab-content refrigeration  ">
+                                       <ul>
+                                                                         
+                                       </ul>
+                                    </div>
+                                                               <div class="tab-content city-civic  ">
+                                       <ul>
+                                                                         
+                                       </ul>
+                                    </div>
+                                                               <div class="tab-content police-defence  ">
+                                       <ul>
+                                                                         
+                                       </ul>
+                                    </div>
+                                                            </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </li>-->
+                  <li>
+                     <a  href="javascript:void(0)" >LIFETIME SUPPORT SOLUTIONS</a>
+                     <div class="main-menu">
+                        <div class="container">
+                           <div class="row">
+                              <div class="menu-left col-30 fl">
+                                 <p>Lifetime Support Solutions is an industry-first concept of innovative solutions to partner customers and other stakeholders through the entire life-cycle of the vehicle. It is to ensure a seamless hassle-free experience, from the time customer consider buying an Eicher vehicle to the time they think of selling it. </p>
+                                 
+                                 <div class="menu-img"><a href="https://www.youtube.com/watch?v=4Z2gGmaaJwo" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/support-icon.png" alt=""></a></div>
+                              </div>
+                              <div class="menu-right col-70 fl">
+                                 <div class="image-link">
+                                    <ul>
+                                       <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-financial-services">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/financial.png" alt="">
+                                             <span>Customized<br>Vehicle Finance</span>
+                                          </a>
+                                       </li>
+                                       <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-secure">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/secure.png" alt="">
+                                             <span>Vehicle<br>Insurance</span>
+                                          </a>
+                                       </li>
+                                       <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-freedom">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/freedom.png" alt="">
+                                             <span>Service<br>Agreements</span>
+                                          </a>
+                                       </li>
+                                       <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-live">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/live.png" alt="">
+                                             <span>Intelligent Fleet Management Solution</span>
+                                          </a>
+                                       </li>
+                                       <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-pro-pilot">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/pro.png" alt="">
+                                             <span>Driver<br>Empowerment</span>
+                                          </a>
+                                       </li>
+                                       <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-service-network">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/network.png" alt="">
+                                             <span>Multi-Touch Points Fully-Equipped Dealerships</span>
+                                          </a>
+                                       </li>
+                                       <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-container-setup">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/container.png" alt="">
+                                             <span>On-Site<br>Support</span>
+                                          </a>
+                                       </li>
+                                       <!-- <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-on-road-service">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/gps.png" alt="">
+                                             <span>Gps Networked Service Van</span>
+                                          </a>
+                                       </li> -->
+                                       <!-- <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-dial-a-part">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/call.png" alt="">
+                                             <span>Parts Availablity<br>Information</span>
+                                          </a>
+                                       </li> -->
+                                       <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-renew">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/reiew.png" alt="">
+                                             <span>Refurbished<br>AggreGates</span>
+                                          </a>
+                                       </li>
+                                       <li >
+                                          <a href="https://www.eichertrucksandbuses.com/used-trucks/eicher-sure-advantage">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/sure.png" alt="">
+                                             <span>Pre-Owned<br>Vehicles</span>
+                                          </a>
+                                       </li>
+                                       <li >
+                                          <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-promise">
+                                             <img src="https://www.eichertrucksandbuses.com/front/images/Eicher-Promise-icon.png" alt="">
+                                             <span>Eicher<br>Promise</span>
+                                          </a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <a  href="javascript:void(0)">USED TRUCKS</a>
+                     <div class="main-menu">
+                        <div class="container">
+                           <div class="row">
+                              <div class="menu-left col-30 fl">
+                                 <p>Eicher Sure is a trusted one-stop solution platform that offers ease of selling, exchanging, and purchasing used trucks. Whether it is an individual or organisation, every truck in this category undergoes in-depth inspection for transparent evaluation and best value.</p>
+                                 
+                                 <div class="menu-icons-circle"><a href="https://www.youtube.com/watch?v=eiGwdI9C-dE" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/menu-icon-sure-of-affordability.png" alt=""></a><!-- <a href="https://www.youtube.com/watch?v=iUgPiDPALTo" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/menu-icon-sure-of-reliability.png" alt=""></a><a href="https://www.youtube.com/watch?v=sHh9h1y7fsw" class="fresco"><img src="https://www.eichertrucksandbuses.com/front/images/menu-icon-sure-of-value-for-money.png" alt=""></a> --></div>
+                              </div>
+                              <div class="menu-right col-70 fl">
+                                 <div class="used-menu">
+                                    <ul>
+                                       <li class="sure"><a href="https://www.eichertrucksandbuses.com/used-trucks/eicher-sure-advantage">Eicher Sure <span>Advantage</span></a></li>
+                                       <li class="used"><a href="https://www.eichertrucksandbuses.com/used-trucks/listing">Buy <span>Used Trucks</span></a></li>
+                                       <li class="exchange"><a href="https://www.eichertrucksandbuses.com/used-trucks/exchange">Exchange <span>Used Trucks</span></a></li>
+                                       <li class="finanace"><a href="https://www.eichertrucksandbuses.com/used-trucks/finance">Finance <span>Used Trucks</span></a></li>
+                                    </ul>
+                                 </div>
+                                 
+                                 
+                                 
+                              </div>
+                              
+                              <div class="used-t-logo">
+                                    
+                                    <img src="https://www.eichertrucksandbuses.com/front/images/eicher-super.png" alt="" />
+                                    
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <a  href="javascript:void(0)">INTERNATIONAL BUSINESS</a>
+                     <div class="main-menu">
+                        <div class="container">
+                           <div class="row">
+                              <div class="menu-left col-30 fl">
+                                 <p>VE Commercial Vehicles has been growing a global footprint through its flagship brand Eicher. With its wanted position of 1,00,000 vehicles annually, the company is working steadfastly towards its ambition of achieving 15% annual volumes from International Business by 2020.</p>
+                                 <div class="border-link skew"><a class="skew-rotate" href="https://www.eichertrucksandbuses.com/international-business/overview">Know More</a></div>
+                              </div>
+                              <div class="menu-right col-70 fl">
+                                 <div class="business-menu fl">
+                                                                        <div class="business-menu-item fl">
+                                       <div class="business-menu-title">SOUTH ASIA</div>
+                                       <ul>
+                                                                                    <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/sri-lanka/products">Sri Lanka</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/bangladesh/products">Bangladesh</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/nepal/products">Nepal</a>
+                                                                                   </li>
+                                                                                                                     </ul>
+                                    </div>
+                                                                     <div class="business-menu-item fl">
+                                       <div class="business-menu-title">AFRICA</div>
+                                       <ul>
+                                                                                    <li >
+                                                                                          <a href="https://www.eichertrucksandbuses.co.za" target="_blank">South Africa</a>
+                                                                                    </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/kenya/products">Kenya</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/tanzania/products">Tanzania</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/ivory-coast/products"> Ivory Coast</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/zambia/products">Zambia</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/mozambique/products">Mozambique</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/nigeria/products">Nigeria</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/egypt/products">Egypt</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/ghana/products">Ghana</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/zimbabwe/products">Zimbabwe</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/ethiopia/products">Ethiopia</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/uganda/products">Uganda</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/democratic-republic-of-congo/products">Democratic Republic of Congo</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/mauritius/products">Mauritius</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/malawi/products">Malawi</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/benin/products">Benin</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/cameroon/products">Cameroon</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/madagascar/products">Madagascar</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/sierra-leone/products">Sierra Leone</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/burkina-faso/products">Burkina Faso</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/liberia/products">Liberia</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/gabon/products">Gabon</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/somalia/products">Somalia</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/sudan/products">Sudan</a>
+                                                                                   </li>
+                                                                                 <li class="view-more-country" style="display:none;" >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/guinea/products">Guinea</a>
+                                                                                   </li>
+                                                                                                                        <li class="view-link view-more"><a href="javascript:void(0)" ng-click="updatecountrylimit()">View More</a></li>
+                                          <li class="view-link view-less" style="display:none;"><a href="javascript:void(0)" ng-click="updatecountrylimittoas()">View Less</a></li>
+                                                                              </ul>
+                                    </div>
+                                                                     <div class="business-menu-item fl">
+                                       <div class="business-menu-title">MIDDLE EAST</div>
+                                       <ul>
+                                                                                    <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/kuwait/products">Kuwait</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/united-arab-emirates/products">United Arab Emirates</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/kingdom-of-saudi-arabia/products">Kingdom of Saudi Arabia</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/qatar/products">Qatar</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/bahrain/products">Bahrain</a>
+                                                                                   </li>
+                                                                                 <li >
+                                                                                             <a href="https://www.eichertrucksandbuses.com/international-business/oman/products">Oman</a>
+                                                                                   </li>
+                                                                                                                     </ul>
+                                    </div>
+                                                                  </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <a  href="javascript:void(0)">NEWS ROOM</a>
+                     <div class="main-menu">
+                        <div class="container">
+                           <div class="row">
+                              <div class="menu-left col-30 fl">
+                                 <p>Eicher Trucks and Buses is constantly setting new benchmarks in manufacturing processes, vehicle technology and service support, to deliver higher productivity and prosperity. Find out more about our latest press releases, social initiatives, awards, and upcoming events in this section. </p>
+                              </div>
+                              <div class="menu-right our-menu col-70 fl">
+                                 <div class="business-menu fl">
+                                    <div class="business-menu-item big fl">
+                                       <ul>
+                                          <li ><a href="https://www.eichertrucksandbuses.com/media/press-material">Press Material</a></li>
+                                          <li ><a href="https://www.eichertrucksandbuses.com/media/social-initiatives">Social Initiatives</a></li>
+                                          <li ><a href="https://www.eichertrucksandbuses.com/media/awards-and-recognitions">Awards & Recognitions</a></li>
+                                          <li ><a href="https://www.eichertrucksandbuses.com/media/events">Events</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="business-menu-right fr"><img src="https://www.eichertrucksandbuses.com/front/images/news-roomthumb.jpg" alt=""></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </nav>
+   <div class="left-fixed">
+      <ul>
+
+               <li class="pnd-enq active"><a href="javascript:void(0)" class="find-v-popup-open">Find A Vehicle</a></li>
+              <li class="locate"><a class="locate-track" href="https://www.eichertrucksandbuses.com/locate-a-dealer">Locate A Dealer</a></li>
+         <li class="faq">
+            <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-on-road-service" class="service-van">Service Van</a> <a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-dial-a-part" class="dial-icon">Dial A part</a><!--       <a class="" href="/lifetime-solutions/on-road-service"><img src="images/24-call.png" alt=""></a>  -->
+         </li>
+         <li class="social-link social">
+                                                <a class="" href="https://www.facebook.com/ETBIndia/" target="_blank"><i class="fa fa-facebook"></i></a>
+                                                            <a class="" href="https://twitter.com/ETBIndia" target="_blank"><i class="fa fa-twitter"></i></a>
+                                                            <a class="" href="https://www.linkedin.com/company/ETBIndia" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                                            <a class="" href="https://www.youtube.com/c/eichertrucksandbuses" target="_blank"><i class="fa fa-youtube"></i></a>
+                                    
+                  <a class="" href="https://bit.ly/Web-optin" target="_blank"><i class="fa fa-whatsapp"></i></a>
+         </li>
+      </ul>
+   </div>
+
+
+
+<div class="no-stripstyle">
+<div class="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<ul>
+					<li><a href="https://www.eichertrucksandbuses.com/">Home</a></li>
+					<li ng-if="breadcrumb_stage_1">Page Not Found</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="center errorpage">
+	
+<h2>404</h2>
+
+<h4>Page Not Found</h4>
+<p>The resource you are looking for might have been removed, had it’s name changed,<br> or it’s temporarily unavailable</p>
+
+<div class="border-link skew redbg">
+						<a class="skew-rotate" href="https://www.eichertrucksandbuses.com/">Back To Home</a>
+					</div>
+
+</div>
+</div>
+
+
+<div class="loaderform"></div>
+
+<div ng-controller="footer">
+<div class="foo-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-18 fl">
+<ul>
+<li class="link-title"><a href="javascript:void(0)">TRUCKS</a></li>
+<li><a href="https://www.eichertrucksandbuses.com/heavy-duty-trucks/haulage">HD - Haulage</a></li>
+<li><a href="https://www.eichertrucksandbuses.com/heavy-duty-trucks/tipper">HD - Tipper</a></li>
+<li><a href="https://www.eichertrucksandbuses.com/heavy-duty-trucks/tractor-trailer">HD - Tractor Trailer</a></li>
+<li><a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/sub-5-ton">LMD - Sub 5 Ton</a></li>
+<li><a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/light-duty">LMD - Light Duty</a></li>
+<li><a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/medium-duty">LMD - Medium Duty</a></li>
+<li><a href="https://www.eichertrucksandbuses.com/light-medium-duty-trucks/tipper">LMD - Tipper</a></li>
+</ul>
+        <ul>
+          <li class="link-title"><a href="javascript:void(0)">BUSES</a></li>
+          <li><a href="https://www.eichertrucksandbuses.com/buses/school-bus/skyline-pro">School Bus - Skyline Pro</a></li>
+          <li><a href="https://www.eichertrucksandbuses.com/buses/school-bus/skyline">School Bus - Skyline</a></li>
+          <li><a href="https://www.eichertrucksandbuses.com/buses/school-bus/starline">School Bus - Starline</a></li>
+          <li><a href="https://www.eichertrucksandbuses.com/buses/staff-bus/skyline-pro">Staff Bus - Skyline Pro</a></li>
+          <li><a href="https://www.eichertrucksandbuses.com/buses/staff-bus/skyline">Staff Bus - Skyline</a></li>
+          <li><a href="https://www.eichertrucksandbuses.com/buses/staff-bus/starline">Staff Bus - Starline</a></li>
+         </ul>
+      </div>
+   <div class="col-18 fl">
+      <ul>
+         <li class="link-title"><a href="javascript:void(0)">USED TRUCKS</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/used-trucks/eicher-sure-advantage">Eicher Sure Advantage</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/used-trucks/listing">Buy Used Trucks</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/used-trucks/exchange">Exchange Used Trucks</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/used-trucks/finance">Finance Used Trucks</a></li>
+      </ul>
+      <ul>
+         <li class="link-title"><a href="https://www.eichertrucksandbuses.com/international-business/overview">INTERNATIONAL BUSINESS</a></li>
+      </ul>
+      <ul>
+         <li class="link-title"><a href="https://www.eichertrucksandbuses.com/blog">blog</a></li>
+      </ul>
+      <ul>
+         <li class="link-title"><a href="https://www.eichertrucksandbuses.com/contact">contact</a></li>
+      </ul>
+      <ul>
+         <li class="link-title"><a href="https://www.eichertrucksandbuses.com/careers">Careers</a></li>
+      </ul>
+   </div>
+   <div class="col-18 fl">
+      <ul>
+         <li class="link-title"><a href="javascript:void(0)">LIFETIME <span>SOLUTIONS</span></a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-financial-services">Financial Services</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-secure">Eicher Secure</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-freedom">Eicher Freedom</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-live">Eicher Live</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-pro-pilot">Eicher Pro-Pilot</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-service-network">Service Network</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-container-setup">Container Setup</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-on-road-service">On Road Service</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-dial-a-part">Dial-A-Part</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-renew">Eicher Renew</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/used-trucks/eicher-sure-advantage">Eicher Sure</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/lifetime-solutions/eicher-promise">Eicher Promise</a></li>
+      </ul>
+   </div>
+   <div class="col-18 fl">
+      <ul>
+         <li class="link-title"><a href="javascript:void(0)">OUR STORY</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/our-story/vecv-joint-venture">VECV Joint Venture</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/our-story/brand-story">Brand Story</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/our-story/world-class-manufacturing">World Class Manufacturing</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/our-story/network">Network</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/our-story/milestones">Milestones</a></li>
+      </ul>
+      <ul>
+         <li class="link-title"><a href="javascript:void(0)">NEWSROOM</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/media/press-material">Press Material</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/media/social-initiatives">Social Initiatives</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/media/awards-and-recognitions">Awards & Recognitions</a></li>
+         <li><a href="https://www.eichertrucksandbuses.com/media/events">Events</a></li>
+         
+      </ul>
+   </div>
+   <div class="col-25 fr">
+      <div class="group-sm">
+         <div class="sm-col">
+            <div class="link-title">Let’s stay in touch</div>
+            <div class="foo-input input-text">
+                <form method="post" id="frm-newsletter">
+                           
+                   <input class="textbox" placeholder="Enter Email Address" type="email" name="newsletter" id="newsletter" onkeyup="return Remove('newsletter');" autocomplete="off" maxlength="100" />
+                   
+                   <input type="submit" type="submit" name="newsletter-submit" id="newsletter-submit"value="GO" class="skew"> 
+                   <div id="load-newsletter-img" style="display:none;"><img src="https://www.eichertrucksandbuses.com/front/images/loading.gif" /></div>
+                   <span id="load-newsletter-img" style="display:none;"></span>
+                  <span id="error_newsletter" class="error"></span>
+                  <span id="success_newsletter" class="success"></span>
+                   
+               </form>
+
+            </div>
+            <div class="clr"></div>
+         </div>
+         <div class="sm-col">
+            <div class="link-title">SEE US ON SOCIAL FORUMS</div>
+                        <div class="social-footer">
+                                      <a class="" href="https://www.facebook.com/ETBIndia/" target="_blank"><i class="fa fa-facebook"></i></a>
+                                                            <a class="" href="https://twitter.com/ETBIndia" target="_blank"><i class="fa fa-twitter"></i></a>
+                                                            <a class="" href="https://www.linkedin.com/company/ETBIndia" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                                            <a class="" href="https://www.youtube.com/c/eichertrucksandbuses" target="_blank"><i class="fa fa-youtube"></i></a>
+                                    
+                  <a class="" href="https://bit.ly/Web-optin" target="_blank"><i class="fa fa-whatsapp"></i></a>
+            </div>
+         </div>
+      </div>
+      <div class="sm-col last" ><div class="link-title">Call us anytime at</div>
+<div class="pho-no"><a href="tel:1800-1023-531">1800-102-</a><a href="tel:1800-1023-531">3</a><a href="tel:1800-1023-531">531</a><span>Eicher Care </span></div>
+																																																																								</div>
+   </div>
+</div>
+</div>
+</div>
+<footer>
+   <div class="container">
+      <div class="row">
+         <div class="col-50 fl">
+            <img src="https://www.eichertrucksandbuses.com/front/images/ve-logo.jpg" alt="">
+         </div>
+         <div class="col-50 fr">
+            <div class="fr">
+               <ul>
+                  <li>© 2018 Eicher. All rights reserved.																																																																								</li>
+                  <li class="links"><a href="https://www.eichertrucksandbuses.com/privacy-policy">Privacy Policy</a></li>
+                  <li class="links"><a href="https://www.eichertrucksandbuses.com/legal-disclaimer">Legal Disclaimer</a></li>
+                  <li class="links"><a href="https://www.eichertrucksandbuses.com/sitemap">Site Map</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+</div>
+<div class="popup-base popup-thank subscribethanks">
+   <div class="in">
+      <div class="close"></div>
+      <div class="thank-icon"></div>
+      <div class="alert-message">Thank You</div>
+      <div class="content-pop">
+         <p>We will keep sending you all the updates regarding eicher.</p>
+      </div>
+   </div>
+</div>
+<div class="popup-base popup-thank contactthanks">
+   <div class="in">
+      <div class="close"></div>
+      <div class="thank-icon"></div>
+      <div class="alert-message">Thank You</div>
+      <div class="content-pop">
+         <p>We will get back to you soon</p>
+      </div>
+   </div>
+</div>
+<div class="popup-base popup-thank brochurethanks">
+   <div class="in">
+      <div class="close"></div>
+      <div class="thank-icon"></div>
+      <div class="alert-message">Thank You</div>
+      <div class="content-pop">
+         <p>Thank you we have emailed you the brochure please check your email.</p>
+      </div>
+      <div class="border-link">
+         <div class="skew-rotate" id="brochure_trk">
+            
+         </div>
+      </div>
+   </div>
+</div>
+<div class="popup-base popup-thank exchangethanks">
+   <div class="in">
+      <div class="close"></div>
+      <div class="thank-icon"></div>
+      <div class="alert-message">Thank You</div>
+      <div class="content-pop">
+         <p>We will get back to you shortly.</p>
+      </div>
+   </div>
+</div>
+<div class="popup-base popup-thank financethanks">
+   <div class="in">
+      <div class="close"></div>
+      <div class="thank-icon"></div>
+      <div class="alert-message">Thank You</div>
+      <div class="content-pop">
+         <p>We will get back to you shortly.</p>
+      </div>
+   </div>
+</div>
+<div class="popup-base popup-thank truckenquiry">
+   <div class="in">
+      <div class="close"></div>
+      <div class="thank-icon"></div>
+      <div class="alert-message">Thank You</div>
+      <div class="content-pop">
+         <p>We will get back to you shortly.</p>
+      </div>
+   </div>
+</div>
+<div class="popup-base popup-thank smsthanks">
+   <div class="in">
+      <div class="close"></div>
+      <div class="thank-icon"></div>
+      <div class="alert-message">Thank You</div>
+      <div class="content-pop">
+         <p>Please check your phone for SMS.</p>
+      </div>
+   </div>
+</div>
+         <!-- find-a-vehicle-->
+<div class="overlay" id="find-a-vehicle-step-1" ng-controller="findvehicle">
+   <div class="close"></div>
+   <div class="overlay-wrap">
+
+     <section class="srchvicle-sec">
+   <div class="container">
+      <h2>Search My Vehicle</h2>
+      <div class="srchvicle">
+          <div class="row">
+            <div class="col">
+               <form method="get" action="https://www.eichertrucksandbuses.com/search-my-vehicle">
+                  <div class="srhcat srhcatfirst fl">
+                  <label for="" class="labs">Vehicle </label>
+                  <select class="select" name="s_vehicle" id="s_vehicle" onchange="getWebCateProductSearch();" required="">
+                        <option value="">Select Vehicle</option>
+
+                        <option value="trucks">Trucks</option>
+                        <option value="Bus">Buses</option>
+                  </select>
+               </div>
+                  <div id="web-search-filter">
+                  <div class="srhcat fl">
+                  <label for="" class="labs">Category </label>
+                  <select class="select" name="" id="" onchange="">
+                        <option value="">Select Category</option>
+                  </select>
+                  </div>
+                   <div class="srhcat fl">
+                  <label for="" class="labs">GVW Range </label>
+                  <select class="select" name="" id="" onchange="">
+                  <option value="">Select GVW</option>
+                  </select>
+                  </div>
+                  <div class="srhcat fl">
+                  <label for="" class="labs">Body Type </label>
+                  <select class="select" name="" id="" onchange="">
+                  <option value="">Select Body Type</option>
+                  </select>
+                  </div>
+               </div>
+  <div class="srhcat srhcatlast fr">
+   <label for="" class="labs">&nbsp; </label>
+ <div class="border-link skew center submit-btn redbg">
+ <input class="skew-rotate" type="submit" value="Submit" name="" id="" onclick="">
+</div>
+</div>
+</form>
+    </div>       </div>
+
+
+
+
+
+         
+      </div>
+ 
+
+ </div></section>   
+
+   </div>
+</div><!-- find-a-vehicle-->
+     
+
+<!-- cookie Policy code-->
+<div class="cookie-sec">
+   <div class="container">
+      <div class="txt-cookie">
+         <p>We use cookies to ensure a good experience on our website, offer you the most relevant information and to analyze traffic. These cookies include targeted media cookies and advanced analytics cookies. By clicking accept you agree to our use of cookies. For additional details please visit <a href="https://www.eichertrucksandbuses.com/privacy-policy">Privacy Policy</a> and <a href="https://www.eichertrucksandbuses.com/cookie-policy">Cookie Policy</a>.</p>
+      </div>
+      <div class="btn-right">
+         <div class="border-link skew blue-btn" onclick="setCookie('ETBCookieCheck',1,365);"><span class="skew-rotate">Accept All Cookies</span></div>
+      </div>
+      <div class="closeCookie">x</div>
+   </div>
+</div>
+
+<script type="text/javascript">
+
+         cookieChk = null;
+
+function getCookie(c_name) {
+  var i,x,y,ARRcookies=document.cookie.split(";");
+  for (i=0;i<ARRcookies.length;i++) {
+    x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+    y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+    x=x.replace(/^\s+|\s+$/g,"");
+    if (x==c_name) {
+      return unescape(y);
+    }
+  }
+}
+
+
+
+function setCookie(c_name,value,exdays) { 
+  var exdate=new Date();
+  exdate.setDate(exdate.getDate() + exdays);
+  var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()) + "; path=/";
+  document.cookie=c_name + "=" + c_value;
+  $(".cookie-sec").fadeOut(200); 
+}
+
+function checkCookie() { 
+  var cookieName="ETBCookieCheck";
+  cookieChk=getCookie(cookieName);
+  if (cookieChk!=null && cookieChk!="") { 
+      $(".cookie-sec").fadeOut(200); 
+  }  else {
+   $(".cookie-sec").fadeIn();
+  }
+}
+
+
+
+
+   $(document).ready(function(){   
+       setTimeout(function () {
+           $(".cookie-sec").fadeIn();
+        });
+       $(".closeCookie, .blue-btn1").click(function() {
+           $(".cookie-sec").fadeOut(200);
+       }); 
+   }); 
+</script>
+<!-- cookie Policy code-->
+
+
+
+
+
+
+
+          
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+        * { margin: 0px; padding: 0px;  }
+     #panorama { width:100%; height: 478px; }
+    .popup { display: none; position: fixed; left:  0; top: 0; transform: inherit!important; width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7); z-index: 9999; }
+    .popup:before { content: ""; width: 25px; height: 25px; display: block; position: absolute; right: 15px; top: 15px; background: url(close.png) center no-repeat; }
+    .popup span { width: 350px; position: absolute; left: 50%; top: 50%; margin:-175px 0 0 -175px!important;  }
+    .popup img { width: 100%;  }
+    .popup.showdata { display: block; } 
+    .pnlm-hotspot-base span { display: none;  }
+    .pnlm-sprite.pnlm-hotspot, .video-hotspot { background: url(circ-cross-thick-red.svg) center no-repeat; background-size: 20px; }
+    
+    .popup.video span { width: 500px; margin-left: -250px!important;  }
+    .popup iframe {  width: 100%; height: 300px; border: none; }
+    .video-hotspot { background: url(Video-Icon.png) center no-repeat; }
+
+
+.spot1_indicator { background:url(../hotspot-icons/1.png);  }
+.spot2_indicator { background:url(../hotspot-icons/2.png);  }
+.spot3_indicator { background:url(../hotspot-icons/3.png);  }
+.spot4_indicator { background:url(../hotspot-icons/4.png);  }
+.spot5_indicator { background:url(../hotspot-icons/5.png); }
+.spot6_indicator { background:url(../hotspot-icons/6.png);  }
+.spot7_indicator { background:url(../hotspot-icons/7.png);  }
+.spot8_indicator { background:url(../hotspot-icons/8.png);  }
+.spot9_indicator { background:url(../hotspot-icons/9.png);  }
+.spot10_indicator { background:url(../hotspot-icons/10.png);  }
+.spot11_indicator { background:url(../hotspot-icons/11.png);  }
+.spot12_indicator { background:url(../hotspot-icons/12.png);  }
+.spot13_indicator { background:url(../hotspot-icons/13.png); }
+.spot14_indicator { background:url(../hotspot-icons/14.png);  }
+.spot15_indicator { background:url(../hotspot-icons/15.png);  }
+.spot16_indicator { background:url(../hotspot-icons/16.png);  }
+.spot17_indicator { background:url(../hotspot-icons/17.png);  }
+.spot18_indicator { background:url(../hotspot-icons/18.png);  }
+.spot19_indicator { background:url(../hotspot-icons/19.png);  }
+.spot20_indicator { background:url(../hotspot-icons/20.png);  }
+
+.video1 { background:url(../hotspot-icons/A.png);  }
+.video2 { background:url(../hotspot-icons/B.png); }
+.video3 { background:url(../hotspot-icons/C.png); }
+.video4 { background:url(../hotspot-icons/D.png); }
+.video5 { background:url(../hotspot-icons/E.png);}
+.video6 { background:url(../hotspot-icons/F.png); }
+.video7 { background:url(../hotspot-icons/G.png);}
+.video8 { background:url(../hotspot-icons/H.png);  }
+.video9 { background:url(../hotspot-icons/I.png);}
+.video10 { background:url(../hotspot-icons/J.png);  }
+
+.pnlm-tooltip { height: 25px; width: 25px; background-size: 20px; background-position:  center top; background-repeat: no-repeat; }
+.pnlm-tooltip.video-icon  { background-size: 22px;  }
+
+ #controls {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 3px;
+    }
+    .ctrl {
+       
+        width: 22px; height: 24px;
+        text-align: center;
+        
+        display: inline-block; font-size: 0px;
+        cursor: pointer; margin: 0 3px; opacity: 0.7;     -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+    }
+    .ctrl:hover { opacity: 1;  }
+
+#pan-left, #pan-up { background: url(https://www.eichertrucksandbuses.com/360/assets/exterior/img/basic/left.svg) center no-repeat;  }
+#pan-right, #pan-down { background: url(https://www.eichertrucksandbuses.com/360/assets/exterior/img/basic/right.svg) center no-repeat;  }
+#zoom-in { background: url(https://www.eichertrucksandbuses.com/360/assets/exterior/img/basic/zoomin.svg) center no-repeat;   }
+#zoom-out { background: url(https://www.eichertrucksandbuses.com/360/assets/exterior/img/basic/zoomout.svg) center no-repeat;   }
+#fullscreen { background: url(https://www.eichertrucksandbuses.com/360/assets/exterior/img/basic/fullscreenon.svg) center no-repeat;  }
+#pan-up { -ms-transform: rotate(58deg); transform: rotate(58deg);  }
+#pan-down { -ms-transform: rotate(120deg); transform: rotate(120deg);     position: relative; top: -2px; }
+
+    @media only screen and (max-height:359px) {
+    #panorama  {  height: 180px; }
+    
+    
+}
+
+@media only screen and (max-height:450px) {
+     #panorama  { height: 207px; }
+     .popup span { width: 192px;  margin:-100px 0 0 -96px!important; }
+     .popup.video span { width: 450px; margin: -92px 0 0  -225px!important; }
+     .popup iframe { height: 180px;  }
+
+    
+}
+
+    @media only screen and (max-width:479px) {
+        #panorama { height: 320px;  }
+        .popup span { width: 240px;  margin:-124px 0 0 -120px!important; }
+        .popup iframe { height: 190px;  }
+ .popup.video span { width: 96%; margin: -98px 0 0 0px!important; left: 2%;  }
+
+    }
+
