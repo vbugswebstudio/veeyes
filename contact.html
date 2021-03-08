@@ -19,6 +19,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,600,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -283,7 +284,7 @@
                         </p>
                     </div>
                     <div class="col-sm-6 col-md-5 col-md-offset-1">
-                        <form action="https://script.google.com/macros/s/AKfycbzA6sDDTYeC97stOxseLjDO-WwDbu00LrLgX1eTelBedtIoWpI7SBZTow/exec" target="_blank" method="POST" data-success="Thanks for your submission, we will be in touch shortly." data-error="Please fill all fields correctly.">
+                        <form id="submit-form" action="">
                             <input type="text" class="validate-required" name="name" placeholder="Your Name" />
                             <input type="text" class="validate-required validate-email" name="email" placeholder="Email Address" />
                             <textarea class="validate-required" name="message" rows="4" placeholder="Message"></textarea>
@@ -440,6 +441,25 @@
                 $('#mobile_horizontal_scrollbar').css('top', "0px");
             });
         }
+    </script>
+     <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbyuXLe1poWC4ThRxMKvH2M0mDK2PBzy5FaGtmpmX93wX5O3zsmfNnA7SVTySnNiai1Y/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
     </script>
 </body>
 
